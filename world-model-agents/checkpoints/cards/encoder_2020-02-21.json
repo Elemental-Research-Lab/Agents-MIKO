@@ -1,0 +1,37 @@
+{
+  "name": "state-encoder",
+  "version": "v1",
+  "cutoff": "2020-02-21",
+  "features": [
+    "rv5",
+    "rv21",
+    "rv63",
+    "ret21",
+    "ret63",
+    "ret252",
+    "dd252",
+    "vix",
+    "vrp",
+    "corr63",
+    "disp21",
+    "oil63",
+    "oilrv21"
+  ],
+  "regimes": [
+    "calm",
+    "normal",
+    "elevated",
+    "crisis"
+  ],
+  "intended_uses": [
+    "regime reading",
+    "analog retrieval",
+    "novelty scoring",
+    "state-conditioning for path generation"
+  ],
+  "known_failure_modes": [
+    "HMM regimes are fitted labels, not ground truth; boundaries move when refitted.",
+    "Analogs are only as good as the features; a new kind of shock can look familiar.",
+    "Forward-risk head is linear in the state and trained on 1990s-onward US data."
+  ]
+}

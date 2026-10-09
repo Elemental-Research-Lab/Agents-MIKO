@@ -1,0 +1,15 @@
+[project]
+name = "miko-wm-agents"
+version = "0.1.0"
+description = "MIKO world-model agents: State Reader, Simulator, Scenario Generator, Planner"
+requires-python = ">=3.10"
+dependencies = ["numpy", "pandas", "scipy", "scikit-learn", "statsmodels", "arch", "hmmlearn", "cvxpy", "skfolio"]
+
+[project.optional-dependencies]
+bench = ["gluonts"]
+llm = ["google-genai", "openai"]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning", "ignore::FutureWarning", "ignore::UserWarning"]

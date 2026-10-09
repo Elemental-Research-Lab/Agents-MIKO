@@ -1,0 +1,115 @@
+{
+  "agent": "Planner",
+  "as_of": "2007-12-31",
+  "numbers": {
+    "sim_sharpe": {
+      "value": 0.5608324488835714,
+      "badge": "SIM",
+      "label": "Sharpe in simulated futures",
+      "unit": "level"
+    },
+    "sim_mdd_cvar95": {
+      "value": 0.18585701219988224,
+      "badge": "SIM",
+      "label": "Max drawdown, worst 5% of simulated years",
+      "unit": "pct_abs"
+    },
+    "k": {
+      "value": 0.8,
+      "badge": "CALC",
+      "label": "Policy: vol-target multiplier",
+      "unit": "level"
+    },
+    "brake": {
+      "value": 0.25,
+      "badge": "CALC",
+      "label": "Policy: exposure cut in drawdown",
+      "unit": "pct_abs"
+    },
+    "cut": {
+      "value": 0.2,
+      "badge": "CALC",
+      "label": "Policy: drawdown that triggers the brake",
+      "unit": "pct_abs"
+    },
+    "n_candidates": {
+      "value": 50.0,
+      "badge": "CALC",
+      "label": "Policies tried (all count as trials)",
+      "unit": "count"
+    }
+  },
+  "provenance": {
+    "models": [
+      {
+        "name": "statepath",
+        "version": "v2",
+        "cutoff": "2007-12-31"
+      },
+      {
+        "name": "state-encoder",
+        "version": "v1",
+        "cutoff": "2007-12-31"
+      }
+    ],
+    "seed": 0,
+    "data_snapshot": "d-64e58446",
+    "params_hash": "e4627f43e4ce",
+    "code_version": "miko-wm-agents 0.1.0"
+  },
+  "readout": "Trained an exposure policy for SP500 in 1000 simulated years; it meets the drawdown limit in simulation.",
+  "verdict": "trained in simulation; confirmed on history",
+  "tables": {
+    "holds_on_other_models": [
+      {
+        "model": "garch-t",
+        "sharpe": 0.9272,
+        "ann_return": 0.0937,
+        "mdd_cvar95": 0.1631,
+        "mdd_median": 0.0743,
+        "turnover_per_year": 4.7211
+      },
+      {
+        "model": "block-bootstrap",
+        "sharpe": 0.5335,
+        "ann_return": 0.0533,
+        "mdd_cvar95": 0.1725,
+        "mdd_median": 0.0821,
+        "turnover_per_year": 5.5743
+      }
+    ],
+    "confirm_on_history": [
+      {
+        "policy": "trained policy",
+        "sharpe": 0.103,
+        "ann_return": 0.0052,
+        "max_drawdown": 0.185,
+        "turnover_per_year": 4.59,
+        "badge": "DATA"
+      },
+      {
+        "policy": "vol target, no brake",
+        "sharpe": 0.2,
+        "ann_return": 0.017,
+        "max_drawdown": 0.2473,
+        "turnover_per_year": 4.22,
+        "badge": "DATA"
+      },
+      {
+        "policy": "buy and hold",
+        "sharpe": 0.109,
+        "ann_return": -0.0059,
+        "max_drawdown": 0.5395,
+        "turnover_per_year": 0.2,
+        "badge": "DATA"
+      }
+    ]
+  },
+  "warnings": [],
+  "limits": [
+    "A policy trained in a world model also learns that model's flaws; it must hold on other models and on real history.",
+    "Simulated results cannot promote a strategy on their own."
+  ],
+  "trial_id": "5454589344",
+  "trial_count": 1
+}

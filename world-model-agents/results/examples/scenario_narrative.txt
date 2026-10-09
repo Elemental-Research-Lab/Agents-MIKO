@@ -1,0 +1,16 @@
+Scenario Generator · as of 2022-12-28
+Verdict: free scenario from narrative
+Scenario: SP500 -20.0%, WTI +40.0%, VIX to 45 over 21 trading days. In 20 of 20 simulated futures the book loses more than 5% (2000 of 2000 paths).
+  Scenario horizon: 21 days [CALC]
+  Scenario paths: 2000 [SIM]
+  Joint shock is more extreme than this share of past windows: 0.995 [CALC]
+  Effective number of past windows used to fill in: 150 [CALC]
+  Book median return under the scenario: -19.3% [SIM]
+  Book VaR 95% under the scenario: 24.0% [SIM]
+  Book CVaR 95% under the scenario: 25.0% [SIM]
+  Scenario paths where the book loses more than 5%: 2000 [SIM]
+  ! Not in the factor set, so ignored: Fed on hold (no macro or rates series in v1).
+  ! The shock is more extreme than 99.5% of past 21-day windows.
+  Model: scenario-engine v1 (cutoff 2022-12-28), statepath v2 (cutoff 2022-12-28), state-encoder v1 (cutoff 2022-12-28) · seed 0 · data d-64e58446 · trial 9c08e4e584 (#1 in lineage)
+  A scenario is an assumption you choose, not a prediction.
+  Simulated. Not a forecast of returns.

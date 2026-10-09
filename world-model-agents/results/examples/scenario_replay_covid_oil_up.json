@@ -1,0 +1,410 @@
+{
+  "agent": "Scenario Generator",
+  "as_of": "2020-02-21",
+  "numbers": {
+    "horizon": {
+      "value": 21.0,
+      "badge": "CALC",
+      "label": "Scenario horizon",
+      "unit": "days"
+    },
+    "n_paths": {
+      "value": 2000.0,
+      "badge": "SIM",
+      "label": "Scenario paths",
+      "unit": "count"
+    },
+    "plausibility_pct": {
+      "value": 1.0,
+      "badge": "CALC",
+      "label": "Joint shock is more extreme than this share of past windows",
+      "unit": "ratio"
+    },
+    "effective_windows": {
+      "value": 149.9999999999999,
+      "badge": "CALC",
+      "label": "Effective number of past windows used to fill in",
+      "unit": "level"
+    },
+    "book_median": {
+      "value": -0.33281623755489276,
+      "badge": "SIM",
+      "label": "Book median return under the scenario",
+      "unit": "pct"
+    },
+    "book_var95": {
+      "value": 0.3731611670220521,
+      "badge": "SIM",
+      "label": "Book VaR 95% under the scenario",
+      "unit": "pct_abs"
+    },
+    "book_cvar95": {
+      "value": 0.3817522105115121,
+      "badge": "SIM",
+      "label": "Book CVaR 95% under the scenario",
+      "unit": "pct_abs"
+    },
+    "book_n_loss": {
+      "value": 2000.0,
+      "badge": "SIM",
+      "label": "Scenario paths where the book loses more than 5%",
+      "unit": "count"
+    }
+  },
+  "provenance": {
+    "models": [
+      {
+        "name": "scenario-engine",
+        "version": "v1",
+        "cutoff": "2020-02-21"
+      },
+      {
+        "name": "statepath",
+        "version": "v2",
+        "cutoff": "2020-02-21"
+      },
+      {
+        "name": "state-encoder",
+        "version": "v1",
+        "cutoff": "2020-02-21"
+      }
+    ],
+    "seed": 0,
+    "data_snapshot": "d-64e58446",
+    "params_hash": "edc31dee2ffc",
+    "code_version": "miko-wm-agents 0.1.0"
+  },
+  "readout": "Scenario: SP500 -33.0%, VIX +260.6%, WTI +20.0% over 21 trading days. In 20 of 20 simulated futures the book loses more than 5% (2000 of 2000 paths).",
+  "verdict": "replay scenario from spec",
+  "tables": {
+    "filled_in": [
+      {
+        "factor": "SP500",
+        "shocked": true,
+        "median_%": -32.97,
+        "p05_%": -32.97,
+        "p95_%": -32.97,
+        "badge": "DATA"
+      },
+      {
+        "factor": "VIX",
+        "shocked": true,
+        "median_%": 260.6,
+        "p05_%": 260.6,
+        "p95_%": 260.6,
+        "badge": "DATA"
+      },
+      {
+        "factor": "WTI",
+        "shocked": true,
+        "median_%": 20.0,
+        "p05_%": 20.0,
+        "p95_%": 20.0,
+        "badge": "DATA"
+      },
+      {
+        "factor": "AAPL",
+        "shocked": false,
+        "median_%": -38.26,
+        "p05_%": -51.08,
+        "p95_%": -20.81,
+        "badge": "SIM"
+      },
+      {
+        "factor": "AMD",
+        "shocked": false,
+        "median_%": -41.31,
+        "p05_%": -57.14,
+        "p95_%": -19.0,
+        "badge": "SIM"
+      },
+      {
+        "factor": "BAC",
+        "shocked": false,
+        "median_%": -56.91,
+        "p05_%": -66.99,
+        "p95_%": -42.9,
+        "badge": "SIM"
+      },
+      {
+        "factor": "BBY",
+        "shocked": false,
+        "median_%": -32.54,
+        "p05_%": -45.24,
+        "p95_%": -17.03,
+        "badge": "SIM"
+      },
+      {
+        "factor": "CVX",
+        "shocked": false,
+        "median_%": -29.67,
+        "p05_%": -36.66,
+        "p95_%": -22.08,
+        "badge": "SIM"
+      },
+      {
+        "factor": "GE",
+        "shocked": false,
+        "median_%": -35.38,
+        "p05_%": -44.74,
+        "p95_%": -25.09,
+        "badge": "SIM"
+      },
+      {
+        "factor": "HD",
+        "shocked": false,
+        "median_%": -33.18,
+        "p05_%": -41.88,
+        "p95_%": -23.15,
+        "badge": "SIM"
+      },
+      {
+        "factor": "JNJ",
+        "shocked": false,
+        "median_%": -21.6,
+        "p05_%": -30.23,
+        "p95_%": -12.3,
+        "badge": "SIM"
+      },
+      {
+        "factor": "JPM",
+        "shocked": false,
+        "median_%": -50.06,
+        "p05_%": -59.56,
+        "p95_%": -38.13,
+        "badge": "SIM"
+      },
+      {
+        "factor": "KO",
+        "shocked": false,
+        "median_%": -22.22,
+        "p05_%": -30.95,
+        "p95_%": -12.48,
+        "badge": "SIM"
+      },
+      {
+        "factor": "LLY",
+        "shocked": false,
+        "median_%": -25.85,
+        "p05_%": -35.05,
+        "p95_%": -14.85,
+        "badge": "SIM"
+      },
+      {
+        "factor": "MRK",
+        "shocked": false,
+        "median_%": -26.96,
+        "p05_%": -35.44,
+        "p95_%": -17.52,
+        "badge": "SIM"
+      },
+      {
+        "factor": "MSFT",
+        "shocked": false,
+        "median_%": -31.47,
+        "p05_%": -40.34,
+        "p95_%": -20.98,
+        "badge": "SIM"
+      },
+      {
+        "factor": "PEP",
+        "shocked": false,
+        "median_%": -20.93,
+        "p05_%": -30.37,
+        "p95_%": -10.6,
+        "badge": "SIM"
+      },
+      {
+        "factor": "PFE",
+        "shocked": false,
+        "median_%": -28.7,
+        "p05_%": -36.94,
+        "p95_%": -19.03,
+        "badge": "SIM"
+      },
+      {
+        "factor": "PG",
+        "shocked": false,
+        "median_%": -20.63,
+        "p05_%": -28.8,
+        "p95_%": -10.8,
+        "badge": "SIM"
+      },
+      {
+        "factor": "RRC",
+        "shocked": false,
+        "median_%": -35.27,
+        "p05_%": -51.97,
+        "p95_%": -14.29,
+        "badge": "SIM"
+      },
+      {
+        "factor": "UNH",
+        "shocked": false,
+        "median_%": -37.79,
+        "p05_%": -50.04,
+        "p95_%": -22.9,
+        "badge": "SIM"
+      },
+      {
+        "factor": "WMT",
+        "shocked": false,
+        "median_%": -24.86,
+        "p05_%": -33.37,
+        "p95_%": -15.53,
+        "badge": "SIM"
+      },
+      {
+        "factor": "XOM",
+        "shocked": false,
+        "median_%": -27.85,
+        "p05_%": -35.84,
+        "p95_%": -19.47,
+        "badge": "SIM"
+      }
+    ],
+    "shock_spec": [
+      {
+        "factor": "SP500",
+        "kind": "pct",
+        "value": -32.9668
+      },
+      {
+        "factor": "VIX",
+        "kind": "pct",
+        "value": 260.5972
+      },
+      {
+        "factor": "WTI",
+        "kind": "pct",
+        "value": 20.0
+      }
+    ],
+    "actual_window_%": [
+      {
+        "factor": "SP500",
+        "actual_%": -32.97,
+        "badge": "DATA"
+      },
+      {
+        "factor": "VIX",
+        "actual_%": 260.6,
+        "badge": "DATA"
+      },
+      {
+        "factor": "WTI",
+        "actual_%": -56.28,
+        "badge": "DATA"
+      },
+      {
+        "factor": "AAPL",
+        "actual_%": -28.33,
+        "badge": "DATA"
+      },
+      {
+        "factor": "AMD",
+        "actual_%": -21.85,
+        "badge": "DATA"
+      },
+      {
+        "factor": "BAC",
+        "actual_%": -47.04,
+        "badge": "DATA"
+      },
+      {
+        "factor": "BBY",
+        "actual_%": -43.32,
+        "badge": "DATA"
+      },
+      {
+        "factor": "CVX",
+        "actual_%": -50.26,
+        "badge": "DATA"
+      },
+      {
+        "factor": "GE",
+        "actual_%": -50.07,
+        "badge": "DATA"
+      },
+      {
+        "factor": "HD",
+        "actual_%": -33.37,
+        "badge": "DATA"
+      },
+      {
+        "factor": "JNJ",
+        "actual_%": -25.4,
+        "badge": "DATA"
+      },
+      {
+        "factor": "JPM",
+        "actual_%": -41.81,
+        "badge": "DATA"
+      },
+      {
+        "factor": "KO",
+        "actual_%": -36.99,
+        "badge": "DATA"
+      },
+      {
+        "factor": "LLY",
+        "actual_%": -16.19,
+        "badge": "DATA"
+      },
+      {
+        "factor": "MRK",
+        "actual_%": -18.69,
+        "badge": "DATA"
+      },
+      {
+        "factor": "MSFT",
+        "actual_%": -23.86,
+        "badge": "DATA"
+      },
+      {
+        "factor": "PEP",
+        "actual_%": -27.4,
+        "badge": "DATA"
+      },
+      {
+        "factor": "PFE",
+        "actual_%": -20.24,
+        "badge": "DATA"
+      },
+      {
+        "factor": "PG",
+        "actual_%": -22.89,
+        "badge": "DATA"
+      },
+      {
+        "factor": "RRC",
+        "actual_%": -13.7,
+        "badge": "DATA"
+      },
+      {
+        "factor": "UNH",
+        "actual_%": -35.07,
+        "badge": "DATA"
+      },
+      {
+        "factor": "WMT",
+        "actual_%": -3.2,
+        "badge": "DATA"
+      },
+      {
+        "factor": "XOM",
+        "actual_%": -46.81,
+        "badge": "DATA"
+      }
+    ]
+  },
+  "warnings": [
+    "The shock is beyond every past 21-day window; fill-ins are extrapolated and bands widened x1.01."
+  ],
+  "limits": [
+    "A scenario is an assumption you choose, not a prediction.",
+    "Simulated. Not a forecast of returns."
+  ],
+  "trial_id": "f428b127f9",
+  "trial_count": 2
+}

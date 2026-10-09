@@ -1,0 +1,185 @@
+{
+  "agent": "Planner",
+  "as_of": "2022-12-28",
+  "numbers": {
+    "invested": {
+      "value": 0.8920912852572225,
+      "badge": "SIM",
+      "label": "Share of capital invested (rest in cash)",
+      "unit": "pct_abs"
+    },
+    "risk_check": {
+      "value": 0.05999999999999999,
+      "badge": "SIM",
+      "label": "CVaR 95% over 21 days on unseen futures",
+      "unit": "pct_abs"
+    },
+    "risk_limit": {
+      "value": 0.06,
+      "badge": "CALC",
+      "label": "Goal: CVaR 95% over 21 days at most",
+      "unit": "pct_abs"
+    },
+    "median_return": {
+      "value": 0.011906573991667436,
+      "badge": "SIM",
+      "label": "Median 21-day return on unseen futures",
+      "unit": "pct"
+    },
+    "turnover": {
+      "value": 0.8920912852572225,
+      "badge": "CALC",
+      "label": "Turnover vs current weights",
+      "unit": "pct_abs"
+    },
+    "cost_bps": {
+      "value": 8.920912852572226,
+      "badge": "CALC",
+      "label": "Estimated trading cost",
+      "unit": "bps"
+    }
+  },
+  "provenance": {
+    "models": [
+      {
+        "name": "statepath",
+        "version": "v2",
+        "cutoff": "2022-12-28"
+      },
+      {
+        "name": "state-encoder",
+        "version": "v1",
+        "cutoff": "2022-12-28"
+      }
+    ],
+    "seed": 0,
+    "data_snapshot": "d-64e58446",
+    "params_hash": "16a5800b78f2",
+    "code_version": "miko-wm-agents 0.1.0"
+  },
+  "readout": "Invest 89% of capital across 15 names; on 2000 futures the optimizer never saw, CVaR 95% over 21 days is 6.00% against a limit of 6.00%.",
+  "verdict": "meets goal on unseen futures",
+  "tables": {
+    "weights": [
+      {
+        "asset": "AAPL",
+        "weight": 0.0295,
+        "badge": "SIM"
+      },
+      {
+        "asset": "BBY",
+        "weight": 0.022,
+        "badge": "SIM"
+      },
+      {
+        "asset": "CVX",
+        "weight": 0.013,
+        "badge": "SIM"
+      },
+      {
+        "asset": "HD",
+        "weight": 0.0007,
+        "badge": "SIM"
+      },
+      {
+        "asset": "JNJ",
+        "weight": 0.1895,
+        "badge": "SIM"
+      },
+      {
+        "asset": "JPM",
+        "weight": 0.0061,
+        "badge": "SIM"
+      },
+      {
+        "asset": "KO",
+        "weight": 0.0766,
+        "badge": "SIM"
+      },
+      {
+        "asset": "LLY",
+        "weight": 0.0359,
+        "badge": "SIM"
+      },
+      {
+        "asset": "MRK",
+        "weight": 0.0257,
+        "badge": "SIM"
+      },
+      {
+        "asset": "MSFT",
+        "weight": 0.0077,
+        "badge": "SIM"
+      },
+      {
+        "asset": "PEP",
+        "weight": 0.1888,
+        "badge": "SIM"
+      },
+      {
+        "asset": "PG",
+        "weight": 0.1022,
+        "badge": "SIM"
+      },
+      {
+        "asset": "RRC",
+        "weight": 0.0371,
+        "badge": "SIM"
+      },
+      {
+        "asset": "UNH",
+        "weight": 0.0684,
+        "badge": "SIM"
+      },
+      {
+        "asset": "WMT",
+        "weight": 0.089,
+        "badge": "SIM"
+      },
+      {
+        "asset": "cash",
+        "weight": 0.1079,
+        "badge": "CALC"
+      }
+    ],
+    "compared_with_baselines": [
+      {
+        "plan": "Planner (world model, optimize)",
+        "invested": 0.8921,
+        "risk": 0.06,
+        "median_return": 0.01191
+      },
+      {
+        "plan": "1/N scaled to the goal",
+        "invested": 0.7222,
+        "risk": 0.06,
+        "median_return": 0.00998
+      },
+      {
+        "plan": "inverse volatility scaled to the goal",
+        "invested": 0.7895,
+        "risk": 0.06,
+        "median_return": 0.01009
+      }
+    ],
+    "goal": [
+      {
+        "measure": "cvar95",
+        "limit": 0.06,
+        "max_weight": 0.2,
+        "long_only": true,
+        "min_invested": 0.0
+      }
+    ]
+  },
+  "warnings": [
+    "The optimized plan breached the goal on unseen futures and was scaled back until it met it."
+  ],
+  "limits": [
+    "Simulated. Not a forecast of returns.",
+    "Impact estimated, not reactive: in v1 your orders do not move simulated prices.",
+    "The expected-return prior is flat: the plan spends the risk budget, it does not pick winners."
+  ],
+  "trial_id": "26df9ca3de",
+  "trial_count": 1
+}

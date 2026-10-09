@@ -1,0 +1,11 @@
+{
+  "panel": "SP500, VIX, WTI and 20 US large caps (AAPL, AMD, BAC, BBY, CVX, GE, HD, JNJ, JPM, KO, LLY, MRK, MSFT, PEP, PFE, PG, RRC, UNH, WMT, XOM)",
+  "frequency": "daily, S&P 500 trading days, 1990-01-03 to 2022-12-28",
+  "returns": "log returns; VIX enters as the log change of its level",
+  "known_issues": [
+    "Survivorship bias: the 20 stocks are ones that existed through 2022 (skfolio dataset).",
+    "WTI went negative on 2020-04-20; non-positive prices are forward-filled.",
+    "VIX and WTI are forward-filled by up to 3 days to align holidays."
+  ],
+  "snapshot": "d-64e58446"
+}

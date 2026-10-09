@@ -1,0 +1,15 @@
+{
+  "name": "position-impact",
+  "version": "v1",
+  "formula": "commission + half spread + Y * sigma_daily * sqrt(Q / ADV)",
+  "params": {
+    "commission_bps": 1.0,
+    "half_spread_bps": 2.0,
+    "Y": 0.7
+  },
+  "known_failure_modes": [
+    "not reactive: orders do not move simulated prices (v1)",
+    "square-root law is an average; single orders vary widely",
+    "spread and ADV are user inputs, not data"
+  ]
+}

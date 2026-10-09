@@ -1,0 +1,437 @@
+{
+  "selected_variant": "stresscov",
+  "selection_crps": {
+    "stresscov": 7.576172878336612,
+    "local": 8.498726626677254,
+    "slope": 9.072605779733015
+  },
+  "hold-out crises 2008-2022 (S&P 500 down 10% or more in 21 days)": {
+    "n_windows": 11,
+    "table": {
+      "wm v1: local-linear": {
+        "RMSE_%": 13.130594215427191,
+        "MAE_%": 9.040586463510559,
+        "IC": 0.4209159261790841,
+        "CRPS_%": 6.852803096904143,
+        "coverage90": 0.8136363636363636,
+        "calib_err90": 0.11363636363636363
+      },
+      "wm v2: local slopes": {
+        "RMSE_%": 13.9437043054865,
+        "MAE_%": 9.769436711016452,
+        "IC": 0.34504442925495554,
+        "CRPS_%": 7.407178431799153,
+        "coverage90": 0.7954545454545454,
+        "calib_err90": 0.11363636363636363
+      },
+      "wm v3: stress covariance <- selected": {
+        "RMSE_%": 12.705418595652988,
+        "MAE_%": 9.04499698351838,
+        "IC": 0.4016404647983595,
+        "CRPS_%": 6.7269159515705415,
+        "coverage90": 0.890909090909091,
+        "calib_err90": 0.07272727272727272
+      },
+      "gauss (full-history cov)": {
+        "RMSE_%": 12.716748603659395,
+        "MAE_%": 8.77927250333285,
+        "IC": 0.4829801777170198,
+        "CRPS_%": 6.782726833848637,
+        "coverage90": 0.7818181818181817,
+        "calib_err90": 0.15454545454545457
+      },
+      "gauss1y (trailing 1y cov)": {
+        "RMSE_%": 13.17835639090847,
+        "MAE_%": 8.961137321637,
+        "IC": 0.5316473000683527,
+        "CRPS_%": 6.941943632622983,
+        "coverage90": 0.7863636363636364,
+        "calib_err90": 0.1590909090909091
+      },
+      "beta (CAPM on S&P)": {
+        "RMSE_%": 11.847819390146622,
+        "MAE_%": 8.616040286353082,
+        "IC": 0.4596035543403964,
+        "CRPS_%": 6.460187924112202,
+        "coverage90": 0.8272727272727273,
+        "calib_err90": 0.12727272727272726
+      },
+      "zero (no fill-in)": {
+        "RMSE_%": 22.414000687343783,
+        "MAE_%": 18.242118244566548,
+        "IC": NaN,
+        "CRPS_%": 14.296343759261696,
+        "coverage90": 0.5363636363636364,
+        "calib_err90": 0.36363636363636365
+      }
+    },
+    "tests": {
+      "stresscov vs gauss: RMSE_%": {
+        "world model better in": "7/11 (ties 0)",
+        "median diff": -0.13585615709387255,
+        "wilcoxon p": 0.6376953125
+      },
+      "stresscov vs gauss: CRPS_%": {
+        "world model better in": "6/11 (ties 0)",
+        "median diff": -0.014808507174755015,
+        "wilcoxon p": 0.7646484375
+      },
+      "stresscov vs gauss: coverage90": {
+        "world model better in": "7/11 (ties 4)",
+        "median diff": 0.09999999999999998,
+        "wilcoxon p": 0.015625
+      },
+      "stresscov vs gauss: calib_err90": {
+        "world model better in": "6/11 (ties 4)",
+        "median diff": -0.050000000000000044,
+        "wilcoxon p": 0.0625
+      },
+      "stresscov vs gauss1y: RMSE_%": {
+        "world model better in": "5/11 (ties 0)",
+        "median diff": 0.6958552976506898,
+        "wilcoxon p": 0.6376953125
+      },
+      "stresscov vs gauss1y: CRPS_%": {
+        "world model better in": "2/11 (ties 0)",
+        "median diff": 0.46940948970002516,
+        "wilcoxon p": 0.3203125
+      },
+      "stresscov vs gauss1y: coverage90": {
+        "world model better in": "5/11 (ties 4)",
+        "median diff": 0.0,
+        "wilcoxon p": 0.0625
+      },
+      "stresscov vs gauss1y: calib_err90": {
+        "world model better in": "5/11 (ties 5)",
+        "median diff": 0.0,
+        "wilcoxon p": 0.09375
+      },
+      "stresscov vs beta: RMSE_%": {
+        "world model better in": "3/11 (ties 0)",
+        "median diff": 0.4786529962627437,
+        "wilcoxon p": 0.0830078125
+      },
+      "stresscov vs beta: CRPS_%": {
+        "world model better in": "4/11 (ties 0)",
+        "median diff": 0.23813100583095803,
+        "wilcoxon p": 0.2060546875
+      },
+      "stresscov vs beta: coverage90": {
+        "world model better in": "6/11 (ties 4)",
+        "median diff": 0.04999999999999993,
+        "wilcoxon p": 0.046875
+      },
+      "stresscov vs beta: calib_err90": {
+        "world model better in": "6/11 (ties 4)",
+        "median diff": -0.04999999999999993,
+        "wilcoxon p": 0.09375
+      },
+      "stresscov vs zero: RMSE_%": {
+        "world model better in": "11/11 (ties 0)",
+        "median diff": -8.752671562662783,
+        "wilcoxon p": 0.0009765625
+      },
+      "stresscov vs zero: CRPS_%": {
+        "world model better in": "11/11 (ties 0)",
+        "median diff": -4.357287058551082,
+        "wilcoxon p": 0.0009765625
+      },
+      "stresscov vs zero: coverage90": {
+        "world model better in": "10/11 (ties 1)",
+        "median diff": 0.20000000000000007,
+        "wilcoxon p": 0.001953125
+      },
+      "stresscov vs zero: calib_err90": {
+        "world model better in": "9/11 (ties 2)",
+        "median diff": -0.20000000000000007,
+        "wilcoxon p": 0.00390625
+      }
+    }
+  },
+  "validation crises 2000-2007 (used to choose the variant)": {
+    "n_windows": 7,
+    "table": {
+      "wm v1: local-linear": {
+        "RMSE_%": 15.487937842074446,
+        "MAE_%": 11.481168824826142,
+        "IC": 0.13426423200859292,
+        "CRPS_%": 8.498726626677254,
+        "coverage90": 0.7571428571428571,
+        "calib_err90": 0.17142857142857146
+      },
+      "wm v2: local slopes": {
+        "RMSE_%": 16.47169406101812,
+        "MAE_%": 12.263523452473015,
+        "IC": 0.1029001074113856,
+        "CRPS_%": 9.072605779733015,
+        "coverage90": 0.7357142857142858,
+        "calib_err90": 0.19285714285714287
+      },
+      "wm v3: stress covariance <- selected": {
+        "RMSE_%": 13.830195504596748,
+        "MAE_%": 10.419777406529436,
+        "IC": 0.26251342642320086,
+        "CRPS_%": 7.576172878336612,
+        "coverage90": 0.8285714285714285,
+        "calib_err90": 0.1142857142857143
+      },
+      "gauss (full-history cov)": {
+        "RMSE_%": 14.013931882126112,
+        "MAE_%": 10.499475653603318,
+        "IC": 0.20880773361976365,
+        "CRPS_%": 7.784398419810061,
+        "coverage90": 0.7642857142857142,
+        "calib_err90": 0.1642857142857143
+      },
+      "gauss1y (trailing 1y cov)": {
+        "RMSE_%": 14.210726048240787,
+        "MAE_%": 10.623683956042015,
+        "IC": 0.26358754027926956,
+        "CRPS_%": 7.785863208603248,
+        "coverage90": 0.7571428571428571,
+        "calib_err90": 0.19999999999999998
+      },
+      "beta (CAPM on S&P)": {
+        "RMSE_%": 13.638775824814578,
+        "MAE_%": 10.481929620234935,
+        "IC": 0.28700322234156816,
+        "CRPS_%": 7.6356049681145475,
+        "coverage90": 0.7714285714285715,
+        "calib_err90": 0.17142857142857143
+      },
+      "zero (no fill-in)": {
+        "RMSE_%": 20.07530031143102,
+        "MAE_%": 15.262694816597115,
+        "IC": NaN,
+        "CRPS_%": 11.767349785533273,
+        "coverage90": 0.5714285714285714,
+        "calib_err90": 0.3285714285714286
+      }
+    },
+    "tests": {
+      "stresscov vs gauss: RMSE_%": {
+        "world model better in": "5/7 (ties 0)",
+        "median diff": -0.338805947450183,
+        "wilcoxon p": 0.6875
+      },
+      "stresscov vs gauss: CRPS_%": {
+        "world model better in": "4/7 (ties 0)",
+        "median diff": -0.2807965088962483,
+        "wilcoxon p": 0.296875
+      },
+      "stresscov vs gauss: coverage90": {
+        "world model better in": "4/7 (ties 2)",
+        "median diff": 0.050000000000000044,
+        "wilcoxon p": 0.1875
+      },
+      "stresscov vs gauss: calib_err90": {
+        "world model better in": "4/7 (ties 2)",
+        "median diff": -1.1102230246251565e-16,
+        "wilcoxon p": 0.25
+      },
+      "stresscov vs gauss1y: RMSE_%": {
+        "world model better in": "2/7 (ties 0)",
+        "median diff": 0.22816626710125654,
+        "wilcoxon p": 0.9375
+      },
+      "stresscov vs gauss1y: CRPS_%": {
+        "world model better in": "4/7 (ties 0)",
+        "median diff": -0.3024359375825645,
+        "wilcoxon p": 0.6875
+      },
+      "stresscov vs gauss1y: coverage90": {
+        "world model better in": "3/7 (ties 2)",
+        "median diff": 0.0,
+        "wilcoxon p": 0.625
+      },
+      "stresscov vs gauss1y: calib_err90": {
+        "world model better in": "4/7 (ties 2)",
+        "median diff": -0.04999999999999993,
+        "wilcoxon p": 0.4375
+      },
+      "stresscov vs beta: RMSE_%": {
+        "world model better in": "3/7 (ties 0)",
+        "median diff": 0.1631399842691721,
+        "wilcoxon p": 0.6875
+      },
+      "stresscov vs beta: CRPS_%": {
+        "world model better in": "4/7 (ties 0)",
+        "median diff": -0.028050860571612546,
+        "wilcoxon p": 0.578125
+      },
+      "stresscov vs beta: coverage90": {
+        "world model better in": "3/7 (ties 4)",
+        "median diff": 0.0,
+        "wilcoxon p": 0.25
+      },
+      "stresscov vs beta: calib_err90": {
+        "world model better in": "3/7 (ties 4)",
+        "median diff": 0.0,
+        "wilcoxon p": 0.25
+      },
+      "stresscov vs zero: RMSE_%": {
+        "world model better in": "6/7 (ties 0)",
+        "median diff": -6.648802698248473,
+        "wilcoxon p": 0.03125
+      },
+      "stresscov vs zero: CRPS_%": {
+        "world model better in": "7/7 (ties 0)",
+        "median diff": -4.027823902658342,
+        "wilcoxon p": 0.015625
+      },
+      "stresscov vs zero: coverage90": {
+        "world model better in": "6/7 (ties 1)",
+        "median diff": 0.20000000000000007,
+        "wilcoxon p": 0.03125
+      },
+      "stresscov vs zero: calib_err90": {
+        "world model better in": "6/7 (ties 1)",
+        "median diff": -0.20000000000000007,
+        "wilcoxon p": 0.03125
+      }
+    }
+  },
+  "all non-overlapping 21-day windows 2000-2022": {
+    "n_windows": 274,
+    "table": {
+      "wm v1: local-linear": {
+        "RMSE_%": 7.494171104218071,
+        "MAE_%": 5.404133174165958,
+        "IC": 0.21414302178804673,
+        "CRPS_%": 4.025245632508761,
+        "coverage90": 0.9142335766423357,
+        "calib_err90": 0.07919708029197078
+      },
+      "wm v2: local slopes": {
+        "RMSE_%": 7.797219720213382,
+        "MAE_%": 5.654037296545605,
+        "IC": 0.179035179188848,
+        "CRPS_%": 4.165591545123886,
+        "coverage90": 0.9087591240875912,
+        "calib_err90": 0.07700729927007297
+      },
+      "wm v3: stress covariance <- selected": {
+        "RMSE_%": 7.39305450302965,
+        "MAE_%": 5.328409117068112,
+        "IC": 0.2095384446517754,
+        "CRPS_%": 4.022892894646127,
+        "coverage90": 0.9395985401459853,
+        "calib_err90": 0.07609489051094888
+      },
+      "gauss (full-history cov)": {
+        "RMSE_%": 7.359052886991589,
+        "MAE_%": 5.301590967255288,
+        "IC": 0.2302453213325284,
+        "CRPS_%": 3.99012135435447,
+        "coverage90": 0.9291970802919708,
+        "calib_err90": 0.07773722627737224
+      },
+      "gauss1y (trailing 1y cov)": {
+        "RMSE_%": 7.306629240952426,
+        "MAE_%": 5.269358488768951,
+        "IC": 0.24060150375939848,
+        "CRPS_%": 3.836936680774822,
+        "coverage90": 0.8897810218978103,
+        "calib_err90": 0.07116788321167881
+      },
+      "beta (CAPM on S&P)": {
+        "RMSE_%": 7.478750810029819,
+        "MAE_%": 5.411474565812758,
+        "IC": 0.15884967894188023,
+        "CRPS_%": 4.099830938899096,
+        "coverage90": 0.9421532846715328,
+        "calib_err90": 0.07864963503649633
+      },
+      "zero (no fill-in)": {
+        "RMSE_%": 8.587191489273824,
+        "MAE_%": 6.351676181115073,
+        "IC": NaN,
+        "CRPS_%": 4.711355013756483,
+        "coverage90": 0.9319343065693431,
+        "calib_err90": 0.0804744525547445
+      }
+    },
+    "tests": {
+      "stresscov vs gauss: RMSE_%": {
+        "world model better in": "121/274 (ties 0)",
+        "median diff": 0.027649257258212323,
+        "wilcoxon p": 0.0612271778681848
+      },
+      "stresscov vs gauss: CRPS_%": {
+        "world model better in": "106/274 (ties 0)",
+        "median diff": 0.031134404513839975,
+        "wilcoxon p": 2.0746615359653462e-05
+      },
+      "stresscov vs gauss: coverage90": {
+        "world model better in": "61/274 (ties 191)",
+        "median diff": 0.0,
+        "wilcoxon p": 4.210025849210696e-05
+      },
+      "stresscov vs gauss: calib_err90": {
+        "world model better in": "44/274 (ties 191)",
+        "median diff": 0.0,
+        "wilcoxon p": 0.6466532776701321
+      },
+      "stresscov vs gauss1y: RMSE_%": {
+        "world model better in": "110/274 (ties 0)",
+        "median diff": 0.062095097736561744,
+        "wilcoxon p": 0.007809434004152283
+      },
+      "stresscov vs gauss1y: CRPS_%": {
+        "world model better in": "64/274 (ties 0)",
+        "median diff": 0.20962830120139486,
+        "wilcoxon p": 1.7912853375424586e-18
+      },
+      "stresscov vs gauss1y: coverage90": {
+        "world model better in": "162/274 (ties 64)",
+        "median diff": 0.04999999999999999,
+        "wilcoxon p": 8.973996592719256e-16
+      },
+      "stresscov vs gauss1y: calib_err90": {
+        "world model better in": "87/274 (ties 66)",
+        "median diff": 0.0,
+        "wilcoxon p": 0.051801801403209925
+      },
+      "stresscov vs beta: RMSE_%": {
+        "world model better in": "155/274 (ties 0)",
+        "median diff": -0.038950658204101485,
+        "wilcoxon p": 0.003757341823236827
+      },
+      "stresscov vs beta: CRPS_%": {
+        "world model better in": "189/274 (ties 0)",
+        "median diff": -0.07027951157301304,
+        "wilcoxon p": 2.458446236354152e-11
+      },
+      "stresscov vs beta: coverage90": {
+        "world model better in": "30/274 (ties 195)",
+        "median diff": 0.0,
+        "wilcoxon p": 0.14081703087297812
+      },
+      "stresscov vs beta: calib_err90": {
+        "world model better in": "45/274 (ties 195)",
+        "median diff": 0.0,
+        "wilcoxon p": 0.3132936467398948
+      },
+      "stresscov vs zero: RMSE_%": {
+        "world model better in": "218/274 (ties 0)",
+        "median diff": -0.7162108960624063,
+        "wilcoxon p": 9.76279984527828e-30
+      },
+      "stresscov vs zero: CRPS_%": {
+        "world model better in": "240/274 (ties 0)",
+        "median diff": -0.3737020354114833,
+        "wilcoxon p": 1.2606599707766449e-36
+      },
+      "stresscov vs zero: coverage90": {
+        "world model better in": "61/274 (ties 143)",
+        "median diff": 0.0,
+        "wilcoxon p": 0.6319539243115078
+      },
+      "stresscov vs zero: calib_err90": {
+        "world model better in": "69/274 (ties 144)",
+        "median diff": 0.0,
+        "wilcoxon p": 0.8644272979153098
+      }
+    }
+  }
+}

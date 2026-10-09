@@ -1,0 +1,97 @@
+{
+  "ours": {
+    "random-walk (Gaussian)": {
+      "CRPS-sum mean": 0.005763640186183758,
+      "CRPS-sum std": 0.00019546946782311288,
+      "own implementation": 0.005790628621468725
+    },
+    "historical-sim-500d": {
+      "CRPS-sum mean": 0.005458363266864764,
+      "CRPS-sum std": 0.00012605855653713313,
+      "own implementation": 0.0054841314634677535
+    },
+    "block-bootstrap": {
+      "CRPS-sum mean": 0.0053136148067129225,
+      "CRPS-sum std": 0.0002076838678818969,
+      "own implementation": 0.0053297286503084015
+    },
+    "garch-t": {
+      "CRPS-sum mean": 0.004953454234673348,
+      "CRPS-sum std": 0.00017482676587855306,
+      "own implementation": 0.004952194034068817
+    },
+    "gjr-garch-t": {
+      "CRPS-sum mean": 0.004940801410202816,
+      "CRPS-sum std": 0.00018101074815038854,
+      "own implementation": 0.0049409980184930615
+    },
+    "fhs (no state)": {
+      "CRPS-sum mean": 0.0047363293902785404,
+      "CRPS-sum std": 0.00019014881219958543,
+      "own implementation": 0.004736982624200121
+    },
+    "statepath (world model)": {
+      "CRPS-sum mean": 0.0047620562845778975,
+      "CRPS-sum std": 0.0001922484562301432,
+      "own implementation": 0.004761334971496046
+    }
+  },
+  "published": {
+    "VES": [
+      0.005,
+      0.0
+    ],
+    "VAR": [
+      0.005,
+      0.0
+    ],
+    "VAR-Lasso": [
+      0.012,
+      0.0002
+    ],
+    "GARCH": [
+      0.023,
+      0.0
+    ],
+    "KVAE": [
+      0.014,
+      0.002
+    ],
+    "Vec-LSTM ind-scaling": [
+      0.008,
+      0.001
+    ],
+    "Vec-LSTM lowrank-Copula": [
+      0.007,
+      0.0
+    ],
+    "GP scaling": [
+      0.009,
+      0.0
+    ],
+    "GP Copula": [
+      0.007,
+      0.0
+    ],
+    "Transformer MAF": [
+      0.005,
+      0.003
+    ],
+    "TimeGrad": [
+      0.006,
+      0.001
+    ],
+    "ScoreGrad VP SDE": [
+      0.006,
+      0.001
+    ],
+    "ScoreGrad VE SDE": [
+      0.007,
+      0.001
+    ],
+    "ScoreGrad sub-VP SDE": [
+      0.006,
+      0.001
+    ]
+  }
+}

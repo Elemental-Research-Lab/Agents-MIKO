@@ -1,0 +1,15 @@
+Scenario Generator · as of 2020-02-21
+Verdict: replay scenario from spec
+Scenario: SP500 -33.0%, VIX +260.6%, WTI +20.0% over 21 trading days. In 20 of 20 simulated futures the book loses more than 5% (2000 of 2000 paths).
+  Scenario horizon: 21 days [CALC]
+  Scenario paths: 2000 [SIM]
+  Joint shock is more extreme than this share of past windows: 1 [CALC]
+  Effective number of past windows used to fill in: 150 [CALC]
+  Book median return under the scenario: -33.3% [SIM]
+  Book VaR 95% under the scenario: 37.3% [SIM]
+  Book CVaR 95% under the scenario: 38.2% [SIM]
+  Scenario paths where the book loses more than 5%: 2000 [SIM]
+  ! The shock is beyond every past 21-day window; fill-ins are extrapolated and bands widened x1.01.
+  Model: scenario-engine v1 (cutoff 2020-02-21), statepath v2 (cutoff 2020-02-21), state-encoder v1 (cutoff 2020-02-21) · seed 0 · data d-64e58446 · trial f428b127f9 (#2 in lineage)
+  A scenario is an assumption you choose, not a prediction.
+  Simulated. Not a forecast of returns.

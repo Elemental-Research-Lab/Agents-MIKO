@@ -1,0 +1,14 @@
+Planner · as of 2022-12-28
+Verdict: meets goal on unseen futures
+Invest 89% of capital across 15 names; on 2000 futures the optimizer never saw, CVaR 95% over 21 days is 6.00% against a limit of 6.00%.
+  Share of capital invested (rest in cash): 89.2% [SIM]
+  CVaR 95% over 21 days on unseen futures: 6.0% [SIM]
+  Goal: CVaR 95% over 21 days at most: 6.0% [CALC]
+  Median 21-day return on unseen futures: +1.2% [SIM]
+  Turnover vs current weights: 89.2% [CALC]
+  Estimated trading cost: 8.9 bps [CALC]
+  ! The optimized plan breached the goal on unseen futures and was scaled back until it met it.
+  Model: statepath v2 (cutoff 2022-12-28), state-encoder v1 (cutoff 2022-12-28) · seed 0 · data d-64e58446 · trial 26df9ca3de (#1 in lineage)
+  Simulated. Not a forecast of returns.
+  Impact estimated, not reactive: in v1 your orders do not move simulated prices.
+  The expected-return prior is flat: the plan spends the risk budget, it does not pick winners.

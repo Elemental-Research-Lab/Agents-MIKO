@@ -1,0 +1,205 @@
+{
+  "agent": "Planner",
+  "as_of": "2022-12-28",
+  "numbers": {
+    "invested": {
+      "value": 0.896950035432618,
+      "badge": "SIM",
+      "label": "Share of capital invested (rest in cash)",
+      "unit": "pct_abs"
+    },
+    "risk_check": {
+      "value": 0.08000000000000003,
+      "badge": "SIM",
+      "label": "CDaR 95% (drawdown) over 21 days on unseen futures",
+      "unit": "pct_abs"
+    },
+    "risk_limit": {
+      "value": 0.08,
+      "badge": "CALC",
+      "label": "Goal: CDaR 95% (drawdown) over 21 days at most",
+      "unit": "pct_abs"
+    },
+    "median_return": {
+      "value": 0.011367018676868169,
+      "badge": "SIM",
+      "label": "Median 21-day return on unseen futures",
+      "unit": "pct"
+    },
+    "turnover": {
+      "value": 0.896950035432618,
+      "badge": "CALC",
+      "label": "Turnover vs current weights",
+      "unit": "pct_abs"
+    },
+    "cost_bps": {
+      "value": 8.969500354326179,
+      "badge": "CALC",
+      "label": "Estimated trading cost",
+      "unit": "bps"
+    }
+  },
+  "provenance": {
+    "models": [
+      {
+        "name": "statepath",
+        "version": "v2",
+        "cutoff": "2022-12-28"
+      },
+      {
+        "name": "state-encoder",
+        "version": "v1",
+        "cutoff": "2022-12-28"
+      }
+    ],
+    "seed": 0,
+    "data_snapshot": "d-64e58446",
+    "params_hash": "c6d30ceb5e78",
+    "code_version": "miko-wm-agents 0.1.0"
+  },
+  "readout": "Invest 90% of capital across 19 names; on 2000 futures the optimizer never saw, CDaR 95% (drawdown) over 21 days is 8.00% against a limit of 8.00%.",
+  "verdict": "meets goal on unseen futures",
+  "tables": {
+    "weights": [
+      {
+        "asset": "AAPL",
+        "weight": 0.0014,
+        "badge": "SIM"
+      },
+      {
+        "asset": "BAC",
+        "weight": 0.005,
+        "badge": "SIM"
+      },
+      {
+        "asset": "BBY",
+        "weight": 0.0149,
+        "badge": "SIM"
+      },
+      {
+        "asset": "CVX",
+        "weight": 0.0278,
+        "badge": "SIM"
+      },
+      {
+        "asset": "GE",
+        "weight": 0.0065,
+        "badge": "SIM"
+      },
+      {
+        "asset": "HD",
+        "weight": 0.028,
+        "badge": "SIM"
+      },
+      {
+        "asset": "JNJ",
+        "weight": 0.0919,
+        "badge": "SIM"
+      },
+      {
+        "asset": "JPM",
+        "weight": 0.0401,
+        "badge": "SIM"
+      },
+      {
+        "asset": "KO",
+        "weight": 0.0859,
+        "badge": "SIM"
+      },
+      {
+        "asset": "LLY",
+        "weight": 0.0258,
+        "badge": "SIM"
+      },
+      {
+        "asset": "MRK",
+        "weight": 0.0655,
+        "badge": "SIM"
+      },
+      {
+        "asset": "MSFT",
+        "weight": 0.0084,
+        "badge": "SIM"
+      },
+      {
+        "asset": "PEP",
+        "weight": 0.0942,
+        "badge": "SIM"
+      },
+      {
+        "asset": "PFE",
+        "weight": 0.0422,
+        "badge": "SIM"
+      },
+      {
+        "asset": "PG",
+        "weight": 0.1062,
+        "badge": "SIM"
+      },
+      {
+        "asset": "RRC",
+        "weight": 0.0555,
+        "badge": "SIM"
+      },
+      {
+        "asset": "UNH",
+        "weight": 0.0824,
+        "badge": "SIM"
+      },
+      {
+        "asset": "WMT",
+        "weight": 0.083,
+        "badge": "SIM"
+      },
+      {
+        "asset": "XOM",
+        "weight": 0.0324,
+        "badge": "SIM"
+      },
+      {
+        "asset": "cash",
+        "weight": 0.103,
+        "badge": "CALC"
+      }
+    ],
+    "compared_with_baselines": [
+      {
+        "plan": "Planner (world model, optimize)",
+        "invested": 0.897,
+        "risk": 0.08,
+        "median_return": 0.01137
+      },
+      {
+        "plan": "1/N scaled to the goal",
+        "invested": 0.7598,
+        "risk": 0.08,
+        "median_return": 0.0105
+      },
+      {
+        "plan": "inverse volatility scaled to the goal",
+        "invested": 0.8363,
+        "risk": 0.08,
+        "median_return": 0.01069
+      }
+    ],
+    "goal": [
+      {
+        "measure": "cdar95",
+        "limit": 0.08,
+        "max_weight": 0.2,
+        "long_only": true,
+        "min_invested": 0.0
+      }
+    ]
+  },
+  "warnings": [
+    "The optimized plan breached the goal on unseen futures and was scaled back until it met it."
+  ],
+  "limits": [
+    "Simulated. Not a forecast of returns.",
+    "Impact estimated, not reactive: in v1 your orders do not move simulated prices.",
+    "The expected-return prior is flat: the plan spends the risk budget, it does not pick winners."
+  ],
+  "trial_id": "0ae33f696e",
+  "trial_count": 2
+}

@@ -1,0 +1,294 @@
+{
+  "agent": "Scenario Generator",
+  "as_of": "2022-12-28",
+  "numbers": {
+    "horizon": {
+      "value": 21.0,
+      "badge": "CALC",
+      "label": "Scenario horizon",
+      "unit": "days"
+    },
+    "n_paths": {
+      "value": 2000.0,
+      "badge": "SIM",
+      "label": "Scenario paths",
+      "unit": "count"
+    },
+    "plausibility_pct": {
+      "value": 0.9947929280697505,
+      "badge": "CALC",
+      "label": "Joint shock is more extreme than this share of past windows",
+      "unit": "ratio"
+    },
+    "effective_windows": {
+      "value": 149.99999999999994,
+      "badge": "CALC",
+      "label": "Effective number of past windows used to fill in",
+      "unit": "level"
+    },
+    "book_median": {
+      "value": -0.19320118275131504,
+      "badge": "SIM",
+      "label": "Book median return under the scenario",
+      "unit": "pct"
+    },
+    "book_var95": {
+      "value": 0.23997788738739995,
+      "badge": "SIM",
+      "label": "Book VaR 95% under the scenario",
+      "unit": "pct_abs"
+    },
+    "book_cvar95": {
+      "value": 0.25035348126330137,
+      "badge": "SIM",
+      "label": "Book CVaR 95% under the scenario",
+      "unit": "pct_abs"
+    },
+    "book_n_loss": {
+      "value": 2000.0,
+      "badge": "SIM",
+      "label": "Scenario paths where the book loses more than 5%",
+      "unit": "count"
+    }
+  },
+  "provenance": {
+    "models": [
+      {
+        "name": "scenario-engine",
+        "version": "v1",
+        "cutoff": "2022-12-28"
+      },
+      {
+        "name": "statepath",
+        "version": "v2",
+        "cutoff": "2022-12-28"
+      },
+      {
+        "name": "state-encoder",
+        "version": "v1",
+        "cutoff": "2022-12-28"
+      }
+    ],
+    "seed": 0,
+    "data_snapshot": "d-64e58446",
+    "params_hash": "1e58bada93b4",
+    "code_version": "miko-wm-agents 0.1.0"
+  },
+  "readout": "Scenario: SP500 -20.0%, WTI +40.0%, VIX to 45 over 21 trading days. In 20 of 20 simulated futures the book loses more than 5% (2000 of 2000 paths).",
+  "verdict": "free scenario from narrative",
+  "tables": {
+    "filled_in": [
+      {
+        "factor": "SP500",
+        "shocked": true,
+        "median_%": -20.0,
+        "p05_%": -20.0,
+        "p95_%": -20.0,
+        "badge": "DATA"
+      },
+      {
+        "factor": "VIX",
+        "shocked": true,
+        "median_%": 103.25,
+        "p05_%": 103.25,
+        "p95_%": 103.25,
+        "badge": "DATA"
+      },
+      {
+        "factor": "WTI",
+        "shocked": true,
+        "median_%": 40.0,
+        "p05_%": 40.0,
+        "p95_%": 40.0,
+        "badge": "DATA"
+      },
+      {
+        "factor": "AAPL",
+        "shocked": false,
+        "median_%": -22.57,
+        "p05_%": -36.79,
+        "p95_%": -3.81,
+        "badge": "SIM"
+      },
+      {
+        "factor": "AMD",
+        "shocked": false,
+        "median_%": -32.78,
+        "p05_%": -48.34,
+        "p95_%": -12.0,
+        "badge": "SIM"
+      },
+      {
+        "factor": "BAC",
+        "shocked": false,
+        "median_%": -28.03,
+        "p05_%": -40.62,
+        "p95_%": -11.43,
+        "badge": "SIM"
+      },
+      {
+        "factor": "BBY",
+        "shocked": false,
+        "median_%": -25.36,
+        "p05_%": -39.6,
+        "p95_%": -8.05,
+        "badge": "SIM"
+      },
+      {
+        "factor": "CVX",
+        "shocked": false,
+        "median_%": -8.85,
+        "p05_%": -17.29,
+        "p95_%": 0.6,
+        "badge": "SIM"
+      },
+      {
+        "factor": "GE",
+        "shocked": false,
+        "median_%": -25.05,
+        "p05_%": -33.49,
+        "p95_%": -15.66,
+        "badge": "SIM"
+      },
+      {
+        "factor": "HD",
+        "shocked": false,
+        "median_%": -25.3,
+        "p05_%": -35.85,
+        "p95_%": -13.1,
+        "badge": "SIM"
+      },
+      {
+        "factor": "JNJ",
+        "shocked": false,
+        "median_%": -16.79,
+        "p05_%": -25.94,
+        "p95_%": -6.72,
+        "badge": "SIM"
+      },
+      {
+        "factor": "JPM",
+        "shocked": false,
+        "median_%": -26.25,
+        "p05_%": -37.31,
+        "p95_%": -12.19,
+        "badge": "SIM"
+      },
+      {
+        "factor": "KO",
+        "shocked": false,
+        "median_%": -17.44,
+        "p05_%": -25.78,
+        "p95_%": -8.38,
+        "badge": "SIM"
+      },
+      {
+        "factor": "LLY",
+        "shocked": false,
+        "median_%": -17.73,
+        "p05_%": -27.71,
+        "p95_%": -6.35,
+        "badge": "SIM"
+      },
+      {
+        "factor": "MRK",
+        "shocked": false,
+        "median_%": -19.03,
+        "p05_%": -27.88,
+        "p95_%": -9.18,
+        "badge": "SIM"
+      },
+      {
+        "factor": "MSFT",
+        "shocked": false,
+        "median_%": -23.43,
+        "p05_%": -33.19,
+        "p95_%": -12.43,
+        "badge": "SIM"
+      },
+      {
+        "factor": "PEP",
+        "shocked": false,
+        "median_%": -18.78,
+        "p05_%": -28.15,
+        "p95_%": -8.08,
+        "badge": "SIM"
+      },
+      {
+        "factor": "PFE",
+        "shocked": false,
+        "median_%": -18.9,
+        "p05_%": -28.73,
+        "p95_%": -7.51,
+        "badge": "SIM"
+      },
+      {
+        "factor": "PG",
+        "shocked": false,
+        "median_%": -16.25,
+        "p05_%": -24.95,
+        "p95_%": -6.13,
+        "badge": "SIM"
+      },
+      {
+        "factor": "RRC",
+        "shocked": false,
+        "median_%": -11.69,
+        "p05_%": -31.18,
+        "p95_%": 13.37,
+        "badge": "SIM"
+      },
+      {
+        "factor": "UNH",
+        "shocked": false,
+        "median_%": -15.47,
+        "p05_%": -30.92,
+        "p95_%": 2.43,
+        "badge": "SIM"
+      },
+      {
+        "factor": "WMT",
+        "shocked": false,
+        "median_%": -20.27,
+        "p05_%": -29.83,
+        "p95_%": -10.25,
+        "badge": "SIM"
+      },
+      {
+        "factor": "XOM",
+        "shocked": false,
+        "median_%": -10.02,
+        "p05_%": -19.21,
+        "p95_%": -0.52,
+        "badge": "SIM"
+      }
+    ],
+    "shock_spec": [
+      {
+        "factor": "SP500",
+        "kind": "pct",
+        "value": -20.0
+      },
+      {
+        "factor": "WTI",
+        "kind": "pct",
+        "value": 40.0
+      },
+      {
+        "factor": "VIX",
+        "kind": "level",
+        "value": 45.0
+      }
+    ]
+  },
+  "warnings": [
+    "Not in the factor set, so ignored: Fed on hold (no macro or rates series in v1).",
+    "The shock is more extreme than 99.5% of past 21-day windows."
+  ],
+  "limits": [
+    "A scenario is an assumption you choose, not a prediction.",
+    "Simulated. Not a forecast of returns."
+  ],
+  "trial_id": "9c08e4e584",
+  "trial_count": 1
+}

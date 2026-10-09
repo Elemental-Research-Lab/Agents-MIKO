@@ -1,0 +1,19 @@
+Simulator · as of 2022-12-28
+In 3 of 20 simulated futures the book loses more than 5% within 21 trading days (341 of 2000 paths).
+  Simulated futures: 2000 [SIM]
+  Horizon: 21 days [SIM]
+  Median return: +2.2% [SIM]
+  5th percentile return: -10.3% [SIM]
+  95th percentile return: +14.8% [SIM]
+  VaR 95% (loss): 10.3% [SIM]
+  CVaR 95% (expected loss in worst 5%): 14.8% [SIM]
+  VaR 99% (loss): 17.4% [SIM]
+  Median max drawdown: -5.6% [SIM]
+  Max drawdown, worst 5% of futures: -14.2% [SIM]
+  Futures losing more than 5%: 341 [SIM]
+  Trading cost incl. estimated impact: 1.0 bps [CALC]
+  Model disagreement: range of VaR 95% across models: 3.0% [SIM]
+  Market-state novelty percentile: 0.721 [SIM]
+  Model: statepath v2 (cutoff 2022-12-28), state-encoder v1 (cutoff 2022-12-28), garch-t v1 (cutoff 2022-12-28), block-bootstrap v1 (cutoff 2022-12-28), random-walk v1 (cutoff 2022-12-28) · seed 0 · data d-64e58446 · trial 222255d1cd (#1 in lineage)
+  Simulated. Not a forecast of returns.
+  Impact estimated, not reactive: in v1 your orders do not move simulated prices.

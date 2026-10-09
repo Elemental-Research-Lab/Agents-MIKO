@@ -1,0 +1,17 @@
+{
+  "selected": "statepath[kernel=0,head=1,widen=0.0]",
+  "mean_rank": {
+    "statepath[kernel=0,head=1,widen=0.0]": 1.6666666666666667,
+    "statepath[kernel=1,head=1,widen=0.0]": 1.8333333333333333,
+    "statepath[kernel=0,head=1,widen=0.25]": 4.333333333333333,
+    "statepath[kernel=1,head=1,widen=0.25]": 4.833333333333333,
+    "statepath[kernel=0,head=0,widen=0.0]": 5.166666666666667,
+    "statepath[kernel=1,head=0,widen=0.0]": 5.333333333333333,
+    "statepath[kernel=0,head=0,widen=0.25]": 6.333333333333333,
+    "statepath[kernel=1,head=0,widen=0.25]": 6.5
+  },
+  "period": [
+    "1996-01-02",
+    "1999-12-31"
+  ]
+}

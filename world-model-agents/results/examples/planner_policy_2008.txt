@@ -1,0 +1,12 @@
+Planner · as of 2007-12-31
+Verdict: trained in simulation; confirmed on history
+Trained an exposure policy for SP500 in 1000 simulated years; it meets the drawdown limit in simulation.
+  Sharpe in simulated futures: 0.561 [SIM]
+  Max drawdown, worst 5% of simulated years: 18.6% [SIM]
+  Policy: vol-target multiplier: 0.8 [CALC]
+  Policy: exposure cut in drawdown: 25.0% [CALC]
+  Policy: drawdown that triggers the brake: 20.0% [CALC]
+  Policies tried (all count as trials): 50 [CALC]
+  Model: statepath v2 (cutoff 2007-12-31), state-encoder v1 (cutoff 2007-12-31) · seed 0 · data d-64e58446 · trial 5454589344 (#1 in lineage)
+  A policy trained in a world model also learns that model's flaws; it must hold on other models and on real history.
+  Simulated results cannot promote a strategy on their own.

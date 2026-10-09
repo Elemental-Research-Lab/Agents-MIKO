@@ -1,0 +1,30 @@
+{
+  "name": "statepath",
+  "version": "v2",
+  "cutoff": "2022-12-28",
+  "assets": [
+    "AAPL",
+    "MSFT",
+    "JPM",
+    "XOM",
+    "PG"
+  ],
+  "kind": "state-conditioned filtered historical simulation",
+  "components": [
+    "GJR-GARCH(1,1) volatility filter per asset (QMLE)",
+    "uniform residual resampling",
+    "learned state head rescaling horizon variance (GARCH forecast + ['vix'])",
+    "novelty band widening up to x1.00"
+  ],
+  "state_conditioned": true,
+  "intended_uses": [
+    "risk bands",
+    "stress paths",
+    "portfolio and policy planning"
+  ],
+  "known_failure_modes": [
+    "daily model; long horizons compound filter error",
+    "cannot produce residual shapes never seen in its training window",
+    "not a forecast of returns: the drift is the fitted constant mean"
+  ]
+}

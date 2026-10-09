@@ -1,0 +1,467 @@
+{
+  "classics": {
+    "1/N": {
+      "ann. return": 0.16518895190643157,
+      "ann. vol": 0.16122201634640107,
+      "Sharpe": 1.0246054208347521,
+      "Sharpe net 10bps": 1.020271494815462,
+      "CEQ (gamma=1)": 0.15219268262903196,
+      "max drawdown": -0.44594181104686925,
+      "monthly turnover": 0.058649166119605974,
+      "avg invested": 1.0000000000000002,
+      "realized monthly CVaR95": 0.09262162969350816,
+      "Sharpe vs 1/N: z": NaN,
+      "Sharpe vs 1/N: p": NaN
+    },
+    "inverse volatility": {
+      "ann. return": 0.15017621695757286,
+      "ann. vol": 0.14174240514557424,
+      "Sharpe": 1.0595009785768543,
+      "Sharpe net 10bps": 1.0551470552411697,
+      "CEQ (gamma=1)": 0.1401307622493468,
+      "max drawdown": -0.40190465283335064,
+      "monthly turnover": 0.051895681683941215,
+      "avg invested": 1.0,
+      "realized monthly CVaR95": 0.08415758002123903,
+      "Sharpe vs 1/N: z": 0.8588685580330095,
+      "Sharpe vs 1/N: p": 0.390413038010998
+    },
+    "min variance (Ledoit-Wolf)": {
+      "ann. return": 0.12959840177895982,
+      "ann. vol": 0.12732443964164145,
+      "Sharpe": 1.017859588808861,
+      "Sharpe net 10bps": 1.0072988938125738,
+      "CEQ (gamma=1)": 0.12149264531393082,
+      "max drawdown": -0.31208782215755027,
+      "monthly turnover": 0.11311296861801147,
+      "avg invested": 1.0,
+      "realized monthly CVaR95": 0.07902038025621885,
+      "Sharpe vs 1/N: z": -0.05692477268567051,
+      "Sharpe vs 1/N: p": 0.9546051205561055
+    },
+    "mean-variance max Sharpe (sample)": {
+      "ann. return": 0.2076154729235692,
+      "ann. vol": 0.19900346927619228,
+      "Sharpe": 1.0432756457899963,
+      "Sharpe net 10bps": 1.0208334833447963,
+      "CEQ (gamma=1)": 0.187814282531589,
+      "max drawdown": -0.47302934030841326,
+      "monthly turnover": 0.37168487087084906,
+      "avg invested": 1.0,
+      "realized monthly CVaR95": 0.10630507540614464,
+      "Sharpe vs 1/N: z": 0.12118004425314216,
+      "Sharpe vs 1/N: p": 0.9035484300024275
+    },
+    "equal risk contribution": {
+      "ann. return": 0.15639751400684102,
+      "ann. vol": 0.1440571796983924,
+      "Sharpe": 1.08566275095962,
+      "Sharpe net 10bps": 1.0809809794863703,
+      "CEQ (gamma=1)": 0.14602127849551355,
+      "max drawdown": -0.41019948129874695,
+      "monthly turnover": 0.05655202866659614,
+      "avg invested": 1.0,
+      "realized monthly CVaR95": 0.08428630237569135,
+      "Sharpe vs 1/N: z": 1.9100339157102002,
+      "Sharpe vs 1/N: p": 0.056128846632568674
+    },
+    "HRP": {
+      "ann. return": 0.14187022953144324,
+      "ann. vol": 0.13230416514434234,
+      "Sharpe": 1.0723035769634646,
+      "Sharpe net 10bps": 1.0567483774715114,
+      "CEQ (gamma=1)": 0.13311803347417253,
+      "max drawdown": -0.3609216288109769,
+      "monthly turnover": 0.16970796327768037,
+      "avg invested": 1.0,
+      "realized monthly CVaR95": 0.08082611233421258,
+      "Sharpe vs 1/N: z": 0.7199695169554201,
+      "Sharpe vs 1/N: p": 0.4715437642518583
+    },
+    "min CVaR (historical)": {
+      "ann. return": 0.14266080168491171,
+      "ann. vol": 0.13060932875797993,
+      "Sharpe": 1.0922711497067967,
+      "Sharpe net 10bps": 1.0700737695573972,
+      "CEQ (gamma=1)": 0.13413140330560666,
+      "max drawdown": -0.23924445873178524,
+      "monthly turnover": 0.2401486842341705,
+      "avg invested": 1.0,
+      "realized monthly CVaR95": 0.07570440287702018,
+      "Sharpe vs 1/N: z": 0.507509415953539,
+      "Sharpe vs 1/N: p": 0.6117974313480607
+    }
+  },
+  "cvar6": {
+    "performance": {
+      "planner (world model)": {
+        "ann. return": 0.12019086621865824,
+        "ann. vol": 0.10811219465242455,
+        "Sharpe": 1.1117234887800218,
+        "Sharpe net 10bps": 1.0759824616529303,
+        "CEQ (gamma=1)": 0.11434674290237637,
+        "max drawdown": -0.23500093834176206,
+        "monthly turnover": 0.32178940677594314,
+        "avg invested": 0.8813437909170725,
+        "realized monthly CVaR95": 0.06325867121472813,
+        "Sharpe vs 1/N: z": 0.847228089291789,
+        "Sharpe vs 1/N: p": 0.39686799977000087,
+        "Sharpe vs 1/N sized by historical risk: p": 0.1421621889383382
+      },
+      "1/N scaled by world-model risk": {
+        "ann. return": 0.12260088910132969,
+        "ann. vol": 0.1090741447824925,
+        "Sharpe": 1.1240142138708602,
+        "Sharpe net 10bps": 1.1145121253340142,
+        "CEQ (gamma=1)": 0.11665230457131362,
+        "max drawdown": -0.24931056564534193,
+        "monthly turnover": 0.08482021834410221,
+        "avg invested": 0.7800564330341052,
+        "realized monthly CVaR95": 0.058627392037106256,
+        "Sharpe vs 1/N: z": 1.698406426385449,
+        "Sharpe vs 1/N: p": 0.08943108003349254,
+        "Sharpe vs 1/N sized by historical risk: p": 0.003381033307238379
+      },
+      "1/N scaled by FHS risk (world model without state)": {
+        "ann. return": 0.12229772437665853,
+        "ann. vol": 0.10914547775307212,
+        "Sharpe": 1.1205019840889947,
+        "Sharpe net 10bps": 1.1111966333963874,
+        "CEQ (gamma=1)": 0.11634135671968536,
+        "max drawdown": -0.24996156784459156,
+        "monthly turnover": 0.0836555804863616,
+        "avg invested": 0.7715437636101157,
+        "realized monthly CVaR95": 0.058463524516392244,
+        "Sharpe vs 1/N: z": 1.7747354004659732,
+        "Sharpe vs 1/N: p": 0.0759415872033502,
+        "Sharpe vs 1/N sized by historical risk: p": 0.009133476338113011
+      },
+      "1/N scaled by GARCH-t risk": {
+        "ann. return": 0.13648920165070827,
+        "ann. vol": 0.12171108025798906,
+        "Sharpe": 1.1214196880135667,
+        "Sharpe net 10bps": 1.1133534638961047,
+        "CEQ (gamma=1)": 0.12908240812192495,
+        "max drawdown": -0.2800815461282383,
+        "monthly turnover": 0.0804806105212413,
+        "avg invested": 0.8553456250318513,
+        "realized monthly CVaR95": 0.06586211408940812,
+        "Sharpe vs 1/N: z": 1.6870868113059918,
+        "Sharpe vs 1/N: p": 0.0915866606550142,
+        "Sharpe vs 1/N sized by historical risk: p": 0.013540456294695913
+      },
+      "1/N scaled by GJR-GARCH-t risk": {
+        "ann. return": 0.12801107273218826,
+        "ann. vol": 0.11613446580356167,
+        "Sharpe": 1.102265996975571,
+        "Sharpe net 10bps": 1.093420211049434,
+        "CEQ (gamma=1)": 0.12126746565844894,
+        "max drawdown": -0.2699643788539966,
+        "monthly turnover": 0.08442974392967728,
+        "avg invested": 0.821747634342603,
+        "realized monthly CVaR95": 0.06373628307372148,
+        "Sharpe vs 1/N: z": 1.3795969150928322,
+        "Sharpe vs 1/N: p": 0.16771078781293536,
+        "Sharpe vs 1/N sized by historical risk: p": 0.038283354878003495
+      },
+      "scaled 1/N (historical risk)": {
+        "ann. return": 0.11558308887897395,
+        "ann. vol": 0.11905814099157012,
+        "Sharpe": 0.9708121420034416,
+        "Sharpe net 10bps": 0.965374042004974,
+        "CEQ (gamma=1)": 0.10849566841078966,
+        "max drawdown": -0.30438399353512624,
+        "monthly turnover": 0.05520175205214124,
+        "avg invested": 0.7672255203167022,
+        "realized monthly CVaR95": 0.07148496024927742,
+        "Sharpe vs 1/N: z": -0.7766538218498653,
+        "Sharpe vs 1/N: p": 0.43736303818568123,
+        "Sharpe vs 1/N sized by historical risk: p": NaN
+      },
+      "scaled min CVaR (historical risk)": {
+        "ann. return": 0.1314939755692366,
+        "ann. vol": 0.1181903076798828,
+        "Sharpe": 1.1125614117647162,
+        "Sharpe net 10bps": 1.090426935372946,
+        "CEQ (gamma=1)": 0.1245095011545039,
+        "max drawdown": -0.20172188571294125,
+        "monthly turnover": 0.21842146252557218,
+        "avg invested": 0.8828467369440627,
+        "realized monthly CVaR95": 0.06964080155613632,
+        "Sharpe vs 1/N: z": 0.6241954578781989,
+        "Sharpe vs 1/N: p": 0.5324992294656945,
+        "Sharpe vs 1/N sized by historical risk: p": 0.26138021605406125
+      },
+      "planner + GARCH-t futures": {
+        "ann. return": 0.13575533090429134,
+        "ann. vol": 0.1376006661613355,
+        "Sharpe": 0.9865891982319291,
+        "Sharpe net 10bps": 0.9660256958888335,
+        "CEQ (gamma=1)": 0.12628835924026968,
+        "max drawdown": -0.30220241399190595,
+        "monthly turnover": 0.2325895561886134,
+        "avg invested": 0.952990970408227,
+        "realized monthly CVaR95": 0.07610275411796348,
+        "Sharpe vs 1/N: z": -0.3616370467614514,
+        "Sharpe vs 1/N: p": 0.7176232764869914,
+        "Sharpe vs 1/N sized by historical risk: p": 0.8817182011267213
+      },
+      "planner + block-bootstrap futures": {
+        "ann. return": 0.11393021928408739,
+        "ann. vol": 0.11271766099941104,
+        "Sharpe": 1.0107574826688668,
+        "Sharpe net 10bps": 0.9846112143073186,
+        "CEQ (gamma=1)": 0.10757758373349832,
+        "max drawdown": -0.26113325164362533,
+        "monthly turnover": 0.24516267151172624,
+        "avg invested": 0.8205308915429304,
+        "realized monthly CVaR95": 0.06767748772460319,
+        "Sharpe vs 1/N: z": -0.14525307793955222,
+        "Sharpe vs 1/N: p": 0.8845110601164712,
+        "Sharpe vs 1/N sized by historical risk: p": 0.6713168727794376
+      }
+    },
+    "compliance": {
+      "planner (world model)": {
+        "realized cvar95 (all months)": 0.06665319279236157,
+        "realized cvar95 (crisis months)": 0.08564867756501833,
+        "goal": 0.06,
+        "share of months losing more than 6.0% (goal implies <= 5%)": 0.023880597014925373
+      },
+      "1/N scaled by world-model risk": {
+        "realized cvar95 (all months)": 0.061846967505447645,
+        "realized cvar95 (crisis months)": 0.06343966957171936,
+        "goal": 0.06,
+        "share of months losing more than 6.0% (goal implies <= 5%)": 0.01791044776119403
+      },
+      "1/N scaled by FHS risk (world model without state)": {
+        "realized cvar95 (all months)": 0.06103978900004101,
+        "realized cvar95 (crisis months)": 0.06435412899851205,
+        "goal": 0.06,
+        "share of months losing more than 6.0% (goal implies <= 5%)": 0.020895522388059702
+      },
+      "1/N scaled by GARCH-t risk": {
+        "realized cvar95 (all months)": 0.06876058879562898,
+        "realized cvar95 (crisis months)": 0.07016354605205115,
+        "goal": 0.06,
+        "share of months losing more than 6.0% (goal implies <= 5%)": 0.03283582089552239
+      },
+      "1/N scaled by GJR-GARCH-t risk": {
+        "realized cvar95 (all months)": 0.06596064570530248,
+        "realized cvar95 (crisis months)": 0.07163802152275738,
+        "goal": 0.06,
+        "share of months losing more than 6.0% (goal implies <= 5%)": 0.029850746268656716
+      },
+      "scaled 1/N (historical risk)": {
+        "realized cvar95 (all months)": 0.07452794997585588,
+        "realized cvar95 (crisis months)": 0.09430847892723655,
+        "goal": 0.06,
+        "share of months losing more than 6.0% (goal implies <= 5%)": 0.03283582089552239
+      },
+      "scaled min CVaR (historical risk)": {
+        "realized cvar95 (all months)": 0.07202012004454791,
+        "realized cvar95 (crisis months)": 0.09864761588896791,
+        "goal": 0.06,
+        "share of months losing more than 6.0% (goal implies <= 5%)": 0.023880597014925373
+      },
+      "planner + GARCH-t futures": {
+        "realized cvar95 (all months)": 0.0810884020687341,
+        "realized cvar95 (crisis months)": 0.10451219626562543,
+        "goal": 0.06,
+        "share of months losing more than 6.0% (goal implies <= 5%)": 0.041791044776119404
+      },
+      "planner + block-bootstrap futures": {
+        "realized cvar95 (all months)": 0.07001793589367664,
+        "realized cvar95 (crisis months)": 0.10101533295356784,
+        "goal": 0.06,
+        "share of months losing more than 6.0% (goal implies <= 5%)": 0.026865671641791045
+      }
+    }
+  },
+  "vol10": {
+    "performance": {
+      "planner (world model)": {
+        "ann. return": 0.10379735573033097,
+        "ann. vol": 0.09545830065417737,
+        "Sharpe": 1.087358092685559,
+        "Sharpe net 10bps": 1.0470463190143384,
+        "CEQ (gamma=1)": 0.09924121214843931,
+        "max drawdown": -0.19496357024762045,
+        "monthly turnover": 0.31919524900841184,
+        "avg invested": 0.8072131161233767,
+        "realized monthly CVaR95": 0.057094784643299624,
+        "Sharpe vs 1/N: z": 0.46594607785767733,
+        "Sharpe vs 1/N: p": 0.6412540979344183,
+        "Sharpe vs 1/N sized by historical risk: p": 0.5450100943221607
+      },
+      "1/N scaled by world-model risk": {
+        "ann. return": 0.10010554716628484,
+        "ann. vol": 0.0896956815646853,
+        "Sharpe": 1.1160576007674607,
+        "Sharpe net 10bps": 1.1061975168636327,
+        "CEQ (gamma=1)": 0.09608288952060812,
+        "max drawdown": -0.20004242819464313,
+        "monthly turnover": 0.07223686608941507,
+        "avg invested": 0.6505576704302248,
+        "realized monthly CVaR95": 0.04917614388732461,
+        "Sharpe vs 1/N: z": 1.4622814683943555,
+        "Sharpe vs 1/N: p": 0.14366409462256513,
+        "Sharpe vs 1/N sized by historical risk: p": 0.04589919645199925
+      },
+      "1/N scaled by FHS risk (world model without state)": {
+        "ann. return": 0.10105468688881795,
+        "ann. vol": 0.09049636236141011,
+        "Sharpe": 1.1166712589533894,
+        "Sharpe net 10bps": 1.1079632800887254,
+        "CEQ (gamma=1)": 0.09695989108849414,
+        "max drawdown": -0.20621125298237852,
+        "monthly turnover": 0.06416267801739824,
+        "avg invested": 0.6422037962166368,
+        "realized monthly CVaR95": 0.049286828617532474,
+        "Sharpe vs 1/N: z": 1.617896240702365,
+        "Sharpe vs 1/N: p": 0.10568496058837118,
+        "Sharpe vs 1/N sized by historical risk: p": 0.058970353305557
+      },
+      "1/N scaled by GARCH-t risk": {
+        "ann. return": 0.10234022852803432,
+        "ann. vol": 0.08677872461327751,
+        "Sharpe": 1.1793239527788109,
+        "Sharpe net 10bps": 1.1600720388547197,
+        "CEQ (gamma=1)": 0.09857495500528078,
+        "max drawdown": -0.18984258309612445,
+        "monthly turnover": 0.1343466193665758,
+        "avg invested": 0.6195000821095414,
+        "realized monthly CVaR95": 0.048028227663043245,
+        "Sharpe vs 1/N: z": 1.5742116155997892,
+        "Sharpe vs 1/N: p": 0.11543853485799671,
+        "Sharpe vs 1/N sized by historical risk: p": 0.055330595143839645
+      },
+      "1/N scaled by GJR-GARCH-t risk": {
+        "ann. return": 0.10629842117024696,
+        "ann. vol": 0.08876039700076678,
+        "Sharpe": 1.197588392595052,
+        "Sharpe net 10bps": 1.1786420903385848,
+        "CEQ (gamma=1)": 0.1023592171323801,
+        "max drawdown": -0.1573326227170072,
+        "monthly turnover": 0.1341359663611497,
+        "avg invested": 0.6379865331160274,
+        "realized monthly CVaR95": 0.050347916487472,
+        "Sharpe vs 1/N: z": 1.9722207311541757,
+        "Sharpe vs 1/N: p": 0.04858441406540859,
+        "Sharpe vs 1/N sized by historical risk: p": 0.02024574549985747
+      },
+      "scaled 1/N (historical risk)": {
+        "ann. return": 0.0938006541388941,
+        "ann. vol": 0.09274041621558798,
+        "Sharpe": 1.011432317931822,
+        "Sharpe net 10bps": 1.0061390127655414,
+        "CEQ (gamma=1)": 0.08950026173897385,
+        "max drawdown": -0.24927585213118697,
+        "monthly turnover": 0.041334191856781256,
+        "avg invested": 0.6196280005172717,
+        "realized monthly CVaR95": 0.056008709795289435,
+        "Sharpe vs 1/N: z": -0.20379124225690506,
+        "Sharpe vs 1/N: p": 0.838516636897285,
+        "Sharpe vs 1/N sized by historical risk: p": NaN
+      },
+      "scaled min CVaR (historical risk)": {
+        "ann. return": 0.1082635040355292,
+        "ann. vol": 0.0942330248071255,
+        "Sharpe": 1.1488913176364766,
+        "Sharpe net 10bps": 1.1257377384220022,
+        "CEQ (gamma=1)": 0.10382357255337904,
+        "max drawdown": -0.17510196300530878,
+        "monthly turnover": 0.18133703010082317,
+        "avg invested": 0.7487359339695752,
+        "realized monthly CVaR95": 0.055741885850436344,
+        "Sharpe vs 1/N: z": 0.8468006664714691,
+        "Sharpe vs 1/N: p": 0.39710623670456613,
+        "Sharpe vs 1/N sized by historical risk: p": 0.2852839325013665
+      },
+      "planner + GARCH-t futures": {
+        "ann. return": 0.12178195380626627,
+        "ann. vol": 0.10968763848644424,
+        "Sharpe": 1.1102614249582619,
+        "Sharpe net 10bps": 1.0646031457775578,
+        "CEQ (gamma=1)": 0.11576626478789984,
+        "max drawdown": -0.2041060990291247,
+        "monthly turnover": 0.4180018238066358,
+        "avg invested": 0.8133988544395268,
+        "realized monthly CVaR95": 0.06458885263935471,
+        "Sharpe vs 1/N: z": 0.6370342974664222,
+        "Sharpe vs 1/N: p": 0.5241025034658175,
+        "Sharpe vs 1/N sized by historical risk: p": 0.44514783375607525
+      },
+      "planner + block-bootstrap futures": {
+        "ann. return": 0.10375480599387599,
+        "ann. vol": 0.09690678788506274,
+        "Sharpe": 1.0706660313303895,
+        "Sharpe net 10bps": 1.0577508700592861,
+        "CEQ (gamma=1)": 0.09905934322477572,
+        "max drawdown": -0.23641182985059228,
+        "monthly turnover": 0.10508723305613517,
+        "avg invested": 0.7441990252963069,
+        "realized monthly CVaR95": 0.05878564188917936,
+        "Sharpe vs 1/N: z": 0.43582815356958554,
+        "Sharpe vs 1/N: p": 0.6629614156653956,
+        "Sharpe vs 1/N sized by historical risk: p": 0.5819000535402015
+      }
+    },
+    "compliance": {
+      "planner (world model)": {
+        "realized vol (all months)": 0.09724129009531765,
+        "realized vol (crisis months)": 0.10890855078699989,
+        "goal": 0.1,
+        "share of months losing more than 4.7% (goal implies <= 5%)": 0.03582089552238806
+      },
+      "1/N scaled by world-model risk": {
+        "realized vol (all months)": 0.0913055473784915,
+        "realized vol (crisis months)": 0.10640258967493266,
+        "goal": 0.1,
+        "share of months losing more than 4.7% (goal implies <= 5%)": 0.029850746268656716
+      },
+      "1/N scaled by FHS risk (world model without state)": {
+        "realized vol (all months)": 0.09200687859207574,
+        "realized vol (crisis months)": 0.11158695934820331,
+        "goal": 0.1,
+        "share of months losing more than 4.7% (goal implies <= 5%)": 0.026865671641791045
+      },
+      "1/N scaled by GARCH-t risk": {
+        "realized vol (all months)": 0.08880294019651906,
+        "realized vol (crisis months)": 0.09850083312947423,
+        "goal": 0.1,
+        "share of months losing more than 4.7% (goal implies <= 5%)": 0.026865671641791045
+      },
+      "1/N scaled by GJR-GARCH-t risk": {
+        "realized vol (all months)": 0.09014805181554529,
+        "realized vol (crisis months)": 0.10184747162488675,
+        "goal": 0.1,
+        "share of months losing more than 4.7% (goal implies <= 5%)": 0.026865671641791045
+      },
+      "scaled 1/N (historical risk)": {
+        "realized vol (all months)": 0.09488428442920828,
+        "realized vol (crisis months)": 0.1297612393059687,
+        "goal": 0.1,
+        "share of months losing more than 4.7% (goal implies <= 5%)": 0.041791044776119404
+      },
+      "scaled min CVaR (historical risk)": {
+        "realized vol (all months)": 0.09725318545289756,
+        "realized vol (crisis months)": 0.11020844868163214,
+        "goal": 0.1,
+        "share of months losing more than 4.7% (goal implies <= 5%)": 0.023880597014925373
+      },
+      "planner + GARCH-t futures": {
+        "realized vol (all months)": 0.11222109458234805,
+        "realized vol (crisis months)": 0.1432842555840537,
+        "goal": 0.1,
+        "share of months losing more than 4.7% (goal implies <= 5%)": 0.04477611940298507
+      },
+      "planner + block-bootstrap futures": {
+        "realized vol (all months)": 0.10013075074013694,
+        "realized vol (crisis months)": 0.14722864500514143,
+        "goal": 0.1,
+        "share of months losing more than 4.7% (goal implies <= 5%)": 0.03582089552238806
+      }
+    }
+  }
+}

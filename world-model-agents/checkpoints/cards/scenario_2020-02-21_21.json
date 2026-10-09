@@ -1,0 +1,42 @@
+{
+  "name": "scenario-engine",
+  "version": "v1",
+  "cutoff": "2020-02-21",
+  "horizon_days": 21,
+  "factors": [
+    "SP500",
+    "VIX",
+    "WTI",
+    "AAPL",
+    "AMD",
+    "BAC",
+    "BBY",
+    "CVX",
+    "GE",
+    "HD",
+    "JNJ",
+    "JPM",
+    "KO",
+    "LLY",
+    "MRK",
+    "MSFT",
+    "PEP",
+    "PFE",
+    "PG",
+    "RRC",
+    "UNH",
+    "WMT",
+    "XOM"
+  ],
+  "method": "kernel-weighted local-linear conditioning on past H-day windows, residual resampling, bridge to daily paths",
+  "intended_uses": [
+    "stress tests",
+    "what-ifs",
+    "narrative scenarios"
+  ],
+  "known_failure_modes": [
+    "a scenario is an assumption you choose, not a prediction",
+    "shocks beyond any past window are extrapolated; bands are widened and flagged",
+    "only factors in the panel can be shocked or filled in (no macro series in v1)"
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "agent": "State Reader",
+  "as_of": "2022-12-28",
+  "numbers": {
+    "p_regime": {
+      "value": 0.9999948250440108,
+      "badge": "SIM",
+      "label": "P(elevated regime)",
+      "unit": "ratio"
+    },
+    "novelty_pct": {
+      "value": 0.7211376858435682,
+      "badge": "SIM",
+      "label": "Novelty percentile vs past days",
+      "unit": "ratio"
+    },
+    "fwd_vol21": {
+      "value": 0.1984196472130544,
+      "badge": "SIM",
+      "label": "Next-21-day volatility (annualized)",
+      "unit": "pct_abs"
+    },
+    "p_drawdown": {
+      "value": 0.1438706187492946,
+      "badge": "SIM",
+      "label": "P(S&P 500 drawdown worse than 7% in 21 days)",
+      "unit": "ratio"
+    },
+    "vix": {
+      "value": 22.139999999999997,
+      "badge": "DATA",
+      "label": "VIX close",
+      "unit": "level"
+    },
+    "rv21": {
+      "value": 0.20040167377841556,
+      "badge": "CALC",
+      "label": "Realized volatility, last 21 days (annualized)",
+      "unit": "pct_abs"
+    },
+    "dd252": {
+      "value": -0.21126390579915555,
+      "badge": "CALC",
+      "label": "S&P 500 drawdown from 1-year high",
+      "unit": "pct"
+    },
+    "corr63": {
+      "value": 0.4804020107639333,
+      "badge": "CALC",
+      "label": "Average stock correlation, last 63 days",
+      "unit": "ratio"
+    },
+    "analog_dd5_count": {
+      "value": 6.0,
+      "badge": "CALC",
+      "label": "Closest past periods followed by a 5%+ drawdown (of 10)",
+      "unit": "count"
+    },
+    "analog_median_next21": {
+      "value": -0.0291,
+      "badge": "CALC",
+      "label": "Median S&P 500 move over the next 21 days after the closest periods",
+      "unit": "pct"
+    }
+  },
+  "provenance": {
+    "models": [
+      {
+        "name": "state-encoder",
+        "version": "v1",
+        "cutoff": "2022-12-28"
+      }
+    ],
+    "seed": null,
+    "data_snapshot": "d-64e58446",
+    "params_hash": "7c394bca9e1a",
+    "code_version": "miko-wm-agents 0.1.0"
+  },
+  "readout": "The market reads as elevated (probability 100%). Today is more unusual than 72% of past days. In 6 of 10 closest past periods the S&P 500 had a drawdown of 5% or more within the next 21 trading days.",
+  "verdict": "elevated",
+  "tables": {
+    "regime_probabilities": [
+      {
+        "regime": "calm",
+        "probability": 0.0,
+        "badge": "SIM"
+      },
+      {
+        "regime": "normal",
+        "probability": 0.0,
+        "badge": "SIM"
+      },
+      {
+        "regime": "elevated",
+        "probability": 1.0,
+        "badge": "SIM"
+      },
+      {
+        "regime": "crisis",
+        "probability": 0.0,
+        "badge": "SIM"
+      }
+    ],
+    "closest_past_periods": [
+      {
+        "date": "2002-12-24",
+        "distance": 0.903,
+        "regime_then": "crisis",
+        "sp500_next_21d_%": -5.04,
+        "max_drawdown_next_21d_%": -9.04,
+        "vol_next_21d_%": 23.3,
+        "sp500_next_63d_%": -3.25,
+        "badge": "DATA"
+      },
+      {
+        "date": "2022-09-21",
+        "distance": 1.028,
+        "regime_then": "crisis",
+        "sp500_next_21d_%": -3.28,
+        "max_drawdown_next_21d_%": -5.64,
+        "vol_next_21d_%": 27.5,
+        "sp500_next_63d_%": 0.84,
+        "badge": "DATA"
+      },
+      {
+        "date": "2003-04-25",
+        "distance": 1.163,
+        "regime_then": "elevated",
+        "sp500_next_21d_%": 6.05,
+        "max_drawdown_next_21d_%": -2.85,
+        "vol_next_21d_%": 17.1,
+        "sp500_next_63d_%": 10.18,
+        "badge": "DATA"
+      },
+      {
+        "date": "2008-09-11",
+        "distance": 1.215,
+        "regime_then": "elevated",
+        "sp500_next_21d_%": -28.01,
+        "max_drawdown_next_21d_%": -28.35,
+        "vol_next_21d_%": 65.0,
+        "sp500_next_63d_%": -28.01,
+        "badge": "DATA"
+      },
+      {
+        "date": "2009-09-03",
+        "distance": 1.241,
+        "regime_then": "crisis",
+        "sp500_next_21d_%": 3.71,
+        "max_drawdown_next_21d_%": -4.33,
+        "vol_next_21d_%": 16.4,
+        "sp500_next_63d_%": 9.64,
+        "badge": "DATA"
+      },
+      {
+        "date": "2001-06-14",
+        "distance": 1.271,
+        "regime_then": "crisis",
+        "sp500_next_21d_%": -1.43,
+        "max_drawdown_next_21d_%": -4.6,
+        "vol_next_21d_%": 16.8,
+        "sp500_next_63d_%": -16.7,
+        "badge": "DATA"
+      },
+      {
+        "date": "2002-05-30",
+        "distance": 1.277,
+        "regime_then": "elevated",
+        "sp500_next_21d_%": -7.03,
+        "max_drawdown_next_21d_%": -8.77,
+        "vol_next_21d_%": 21.2,
+        "sp500_next_63d_%": -13.79,
+        "badge": "DATA"
+      },
+      {
+        "date": "2022-06-10",
+        "distance": 1.349,
+        "regime_then": "elevated",
+        "sp500_next_21d_%": -2.54,
+        "max_drawdown_next_21d_%": -6.0,
+        "vol_next_21d_%": 25.8,
+        "sp500_next_63d_%": 5.37,
+        "badge": "DATA"
+      },
+      {
+        "date": "2011-11-23",
+        "distance": 1.414,
+        "regime_then": "elevated",
+        "sp500_next_21d_%": 8.91,
+        "max_drawdown_next_21d_%": -4.41,
+        "vol_next_21d_%": 24.7,
+        "sp500_next_63d_%": 17.71,
+        "badge": "DATA"
+      },
+      {
+        "date": "2008-06-12",
+        "distance": 1.42,
+        "regime_then": "elevated",
+        "sp500_next_21d_%": -8.33,
+        "max_drawdown_next_21d_%": -9.69,
+        "vol_next_21d_%": 19.5,
+        "sp500_next_63d_%": -6.78,
+        "badge": "DATA"
+      }
+    ]
+  },
+  "warnings": [],
+  "limits": [
+    "Regimes are fitted labels, not ground truth.",
+    "What followed a past period is history, not a forecast."
+  ],
+  "trial_id": "f5467caa7d",
+  "trial_count": 1
+}

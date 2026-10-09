@@ -1,0 +1,375 @@
+{
+  "agent": "Simulator",
+  "as_of": "2022-12-28",
+  "numbers": {
+    "n_paths": {
+      "value": 2000.0,
+      "badge": "SIM",
+      "label": "Simulated futures",
+      "unit": "count"
+    },
+    "horizon": {
+      "value": 21.0,
+      "badge": "SIM",
+      "label": "Horizon",
+      "unit": "days"
+    },
+    "median_return": {
+      "value": 0.022154870389375914,
+      "badge": "SIM",
+      "label": "Median return",
+      "unit": "pct"
+    },
+    "q05": {
+      "value": -0.10274137583059832,
+      "badge": "SIM",
+      "label": "5th percentile return",
+      "unit": "pct"
+    },
+    "q95": {
+      "value": 0.14807812533560832,
+      "badge": "SIM",
+      "label": "95th percentile return",
+      "unit": "pct"
+    },
+    "var95": {
+      "value": 0.10274137583059832,
+      "badge": "SIM",
+      "label": "VaR 95% (loss)",
+      "unit": "pct_abs"
+    },
+    "cvar95": {
+      "value": 0.1476772834568477,
+      "badge": "SIM",
+      "label": "CVaR 95% (expected loss in worst 5%)",
+      "unit": "pct_abs"
+    },
+    "var99": {
+      "value": 0.1735229889987515,
+      "badge": "SIM",
+      "label": "VaR 99% (loss)",
+      "unit": "pct_abs"
+    },
+    "mdd_median": {
+      "value": -0.055723860536902536,
+      "badge": "SIM",
+      "label": "Median max drawdown",
+      "unit": "pct"
+    },
+    "mdd_q95": {
+      "value": -0.14229520031123968,
+      "badge": "SIM",
+      "label": "Max drawdown, worst 5% of futures",
+      "unit": "pct"
+    },
+    "n_loss": {
+      "value": 341.0,
+      "badge": "SIM",
+      "label": "Futures losing more than 5%",
+      "unit": "count"
+    },
+    "costs_bps": {
+      "value": 0.9766753289218179,
+      "badge": "CALC",
+      "label": "Trading cost incl. estimated impact",
+      "unit": "bps"
+    },
+    "model_disagreement_var95": {
+      "value": 0.029521754922765875,
+      "badge": "SIM",
+      "label": "Model disagreement: range of VaR 95% across models",
+      "unit": "pct_abs"
+    },
+    "novelty_pct": {
+      "value": 0.7211376858435682,
+      "badge": "SIM",
+      "label": "Market-state novelty percentile",
+      "unit": "ratio"
+    }
+  },
+  "provenance": {
+    "models": [
+      {
+        "name": "statepath",
+        "version": "v2",
+        "cutoff": "2022-12-28"
+      },
+      {
+        "name": "state-encoder",
+        "version": "v1",
+        "cutoff": "2022-12-28"
+      },
+      {
+        "name": "garch-t",
+        "version": "v1",
+        "cutoff": "2022-12-28"
+      },
+      {
+        "name": "block-bootstrap",
+        "version": "v1",
+        "cutoff": "2022-12-28"
+      },
+      {
+        "name": "random-walk",
+        "version": "v1",
+        "cutoff": "2022-12-28"
+      }
+    ],
+    "seed": 0,
+    "data_snapshot": "d-64e58446",
+    "params_hash": "84004cbe8d60",
+    "code_version": "miko-wm-agents 0.1.0"
+  },
+  "readout": "In 3 of 20 simulated futures the book loses more than 5% within 21 trading days (341 of 2000 paths).",
+  "verdict": null,
+  "tables": {
+    "models_side_by_side": [
+      {
+        "model": "statepath (world model)",
+        "median": 0.02215,
+        "var95": 0.10274,
+        "cvar95": 0.14768,
+        "p_loss": 0.1705,
+        "mdd_q95": -0.1423
+      },
+      {
+        "model": "garch-t",
+        "median": 0.01981,
+        "var95": 0.08588,
+        "cvar95": 0.11897,
+        "p_loss": 0.1455,
+        "mdd_q95": -0.12117
+      },
+      {
+        "model": "block-bootstrap",
+        "median": 0.02256,
+        "var95": 0.11031,
+        "cvar95": 0.15163,
+        "p_loss": 0.1645,
+        "mdd_q95": -0.15527
+      },
+      {
+        "model": "random-walk",
+        "median": 0.01298,
+        "var95": 0.1154,
+        "cvar95": 0.14915,
+        "p_loss": 0.227,
+        "mdd_q95": -0.15329
+      }
+    ],
+    "fan": [
+      {
+        "day": 0,
+        "date_approx": "2022-12-28",
+        "q5": 0.9999,
+        "q25": 0.9999,
+        "q50": 0.9999,
+        "q75": 0.9999,
+        "q95": 0.9999
+      },
+      {
+        "day": 1,
+        "date_approx": "2022-12-29",
+        "q5": 0.97402,
+        "q25": 0.99054,
+        "q50": 1.00093,
+        "q75": 1.01081,
+        "q95": 1.02619
+      },
+      {
+        "day": 2,
+        "date_approx": "2022-12-30",
+        "q5": 0.96086,
+        "q25": 0.98693,
+        "q50": 1.00143,
+        "q75": 1.01651,
+        "q95": 1.03926
+      },
+      {
+        "day": 3,
+        "date_approx": "2023-01-02",
+        "q5": 0.95397,
+        "q25": 0.98388,
+        "q50": 1.00256,
+        "q75": 1.02153,
+        "q95": 1.04913
+      },
+      {
+        "day": 4,
+        "date_approx": "2023-01-03",
+        "q5": 0.94862,
+        "q25": 0.98144,
+        "q50": 1.00302,
+        "q75": 1.02588,
+        "q95": 1.05894
+      },
+      {
+        "day": 5,
+        "date_approx": "2023-01-04",
+        "q5": 0.94309,
+        "q25": 0.97883,
+        "q50": 1.00424,
+        "q75": 1.02955,
+        "q95": 1.0679
+      },
+      {
+        "day": 6,
+        "date_approx": "2023-01-05",
+        "q5": 0.93778,
+        "q25": 0.97927,
+        "q50": 1.00685,
+        "q75": 1.03318,
+        "q95": 1.07236
+      },
+      {
+        "day": 7,
+        "date_approx": "2023-01-06",
+        "q5": 0.9334,
+        "q25": 0.97921,
+        "q50": 1.00653,
+        "q75": 1.03648,
+        "q95": 1.08041
+      },
+      {
+        "day": 8,
+        "date_approx": "2023-01-09",
+        "q5": 0.9316,
+        "q25": 0.97775,
+        "q50": 1.00657,
+        "q75": 1.03882,
+        "q95": 1.08547
+      },
+      {
+        "day": 9,
+        "date_approx": "2023-01-10",
+        "q5": 0.92613,
+        "q25": 0.97616,
+        "q50": 1.00849,
+        "q75": 1.04107,
+        "q95": 1.0914
+      },
+      {
+        "day": 10,
+        "date_approx": "2023-01-11",
+        "q5": 0.92225,
+        "q25": 0.97601,
+        "q50": 1.01135,
+        "q75": 1.04505,
+        "q95": 1.09513
+      },
+      {
+        "day": 11,
+        "date_approx": "2023-01-12",
+        "q5": 0.91856,
+        "q25": 0.97377,
+        "q50": 1.0123,
+        "q75": 1.04771,
+        "q95": 1.10157
+      },
+      {
+        "day": 12,
+        "date_approx": "2023-01-13",
+        "q5": 0.91443,
+        "q25": 0.97352,
+        "q50": 1.01458,
+        "q75": 1.05188,
+        "q95": 1.10619
+      },
+      {
+        "day": 13,
+        "date_approx": "2023-01-16",
+        "q5": 0.91604,
+        "q25": 0.97229,
+        "q50": 1.01365,
+        "q75": 1.05235,
+        "q95": 1.11285
+      },
+      {
+        "day": 14,
+        "date_approx": "2023-01-17",
+        "q5": 0.91153,
+        "q25": 0.97438,
+        "q50": 1.01542,
+        "q75": 1.05682,
+        "q95": 1.11723
+      },
+      {
+        "day": 15,
+        "date_approx": "2023-01-18",
+        "q5": 0.90878,
+        "q25": 0.97387,
+        "q50": 1.01788,
+        "q75": 1.0592,
+        "q95": 1.1194
+      },
+      {
+        "day": 16,
+        "date_approx": "2023-01-19",
+        "q5": 0.90348,
+        "q25": 0.97219,
+        "q50": 1.01633,
+        "q75": 1.0619,
+        "q95": 1.12687
+      },
+      {
+        "day": 17,
+        "date_approx": "2023-01-20",
+        "q5": 0.90285,
+        "q25": 0.97319,
+        "q50": 1.01908,
+        "q75": 1.06527,
+        "q95": 1.13258
+      },
+      {
+        "day": 18,
+        "date_approx": "2023-01-23",
+        "q5": 0.89838,
+        "q25": 0.97494,
+        "q50": 1.02007,
+        "q75": 1.06708,
+        "q95": 1.13785
+      },
+      {
+        "day": 19,
+        "date_approx": "2023-01-24",
+        "q5": 0.8989,
+        "q25": 0.97231,
+        "q50": 1.02172,
+        "q75": 1.07144,
+        "q95": 1.14041
+      },
+      {
+        "day": 20,
+        "date_approx": "2023-01-25",
+        "q5": 0.89913,
+        "q25": 0.97202,
+        "q50": 1.02132,
+        "q75": 1.07122,
+        "q95": 1.1454
+      },
+      {
+        "day": 21,
+        "date_approx": "2023-01-26",
+        "q5": 0.89726,
+        "q25": 0.97251,
+        "q50": 1.02215,
+        "q75": 1.07364,
+        "q95": 1.14808
+      }
+    ],
+    "costs": [
+      {
+        "asset": "AAPL",
+        "cost": 97.67,
+        "badge": "CALC"
+      }
+    ]
+  },
+  "warnings": [],
+  "limits": [
+    "Simulated. Not a forecast of returns.",
+    "Impact estimated, not reactive: in v1 your orders do not move simulated prices."
+  ],
+  "trial_id": "222255d1cd",
+  "trial_count": 1
+}

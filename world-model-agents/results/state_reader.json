@@ -1,0 +1,184 @@
+{
+  "vol": {
+    "ewma": {
+      "QLIKE": 0.4253623208931242,
+      "MSE log-vol": 0.14775347743930745
+    },
+    "garch": {
+      "QLIKE": 0.33766734221066547,
+      "MSE log-vol": 0.13966125864005519
+    },
+    "gjr": {
+      "QLIKE": 0.3271797681665292,
+      "MSE log-vol": 0.1333506759037097
+    },
+    "har": {
+      "QLIKE": 0.3720856429256811,
+      "MSE log-vol": 0.14451173555736233
+    },
+    "vix_only": {
+      "QLIKE": 0.3343309652585217,
+      "MSE log-vol": 0.11800716896560857
+    },
+    "analogs": {
+      "QLIKE": 0.5481105388561676,
+      "MSE log-vol": 0.148515293292426
+    },
+    "state_reader": {
+      "QLIKE": 0.3349587406782359,
+      "MSE log-vol": 0.1186131861775996
+    }
+  },
+  "dm": {
+    "ewma": [
+      -3.931207424244026,
+      8.452030977790237e-05
+    ],
+    "garch": [
+      -0.14827964286599113,
+      0.8821220803940812
+    ],
+    "gjr": [
+      0.39204726817305335,
+      0.695023288743807
+    ],
+    "har": [
+      -2.6403013892045792,
+      0.008283232754598746
+    ],
+    "vix_only": [
+      0.10328984528961029,
+      0.9177329347969614
+    ],
+    "analogs": [
+      -3.8796662228486647,
+      0.00010459990024735966
+    ]
+  },
+  "dm_log_mse": {
+    "ewma": [
+      -4.929516480819335,
+      8.243338172064796e-07
+    ],
+    "garch": [
+      -4.276351991597514,
+      1.899807620331373e-05
+    ],
+    "gjr": [
+      -2.660628351672637,
+      0.007799499398163379
+    ],
+    "har": [
+      -6.030568251629684,
+      1.6338415065320078e-09
+    ],
+    "vix_only": [
+      0.48998076709668636,
+      0.624147508577136
+    ],
+    "analogs": [
+      -3.1884941915870977,
+      0.0014301588313256897
+    ]
+  },
+  "warning": {
+    "State Reader (5 state features)": {
+      "AUC": 0.7063268236286003,
+      "Brier": 0.13685563581405838,
+      "log loss": 0.4588348865078067
+    },
+    "VIX only": {
+      "AUC": 0.7293536693782321,
+      "Brier": 0.1338556241584241,
+      "log loss": 0.4280555280052018
+    },
+    "21-day realized vol only": {
+      "AUC": 0.7202584821633534,
+      "Brier": 0.1326110535048132,
+      "log loss": 0.42916854184422454
+    },
+    "HMM stress-regime probability": {
+      "AUC": 0.7108766606425116,
+      "Brier": 0.3221985714446916,
+      "log loss": 2.8516115397894883
+    },
+    "below 200-day moving average": {
+      "AUC": 0.6878107900547182,
+      "Brier": 0.2640849934696363,
+      "log loss": 2.4328727346104717
+    }
+  },
+  "nber": {
+    "HMM stress-regime probability": {
+      "AUC (recession days)": 0.9104036730611874,
+      "mean in recessions": 0.9717510254442105,
+      "mean otherwise": 0.3403752218581742,
+      "HMM AUC minus this: 90% CI (year-block bootstrap)": NaN
+    },
+    "VIX level": {
+      "AUC (recession days)": 0.8567486438161045,
+      "mean in recessions": 32.43726429675425,
+      "mean otherwise": 18.627190196078434,
+      "HMM AUC minus this: 90% CI (year-block bootstrap)": "[-0.030, +0.099]"
+    },
+    "GJR-GARCH volatility": {
+      "AUC (recession days)": 0.8663984604661029,
+      "mean in recessions": 0.11842757240546639,
+      "mean otherwise": 0.027264754287881592,
+      "HMM AUC minus this: 90% CI (year-block bootstrap)": "[-0.042, +0.102]"
+    },
+    "below 200-day moving average": {
+      "AUC (recession days)": 0.8485169863927023,
+      "mean in recessions": 0.9227202472952086,
+      "mean otherwise": 0.2256862745098039,
+      "HMM AUC minus this: 90% CI (year-block bootstrap)": "[+0.023, +0.115]"
+    }
+  },
+  "novelty": {
+    "Q1 (most familiar)": {
+      "novelty_pct": 0.0571515070035205,
+      "mean_abs_next_day_return_pct": 0.47187778949767956,
+      "realized_vol_next_21d": 0.10470145483260691,
+      "gjr_qlike": 0.27787694399528035,
+      "state_reader_qlike": 0.24479497257095145,
+      "gjr_normal_1pct_var_breach": 0.01565217391304348,
+      "drawdown_event_rate": 0.04
+    },
+    "Q2": {
+      "novelty_pct": 0.2323529411764706,
+      "mean_abs_next_day_return_pct": 0.5693452376213523,
+      "realized_vol_next_21d": 0.12448154710758694,
+      "gjr_qlike": 0.4918631617719427,
+      "state_reader_qlike": 0.510611191932128,
+      "gjr_normal_1pct_var_breach": 0.017406440382941687,
+      "drawdown_event_rate": 0.07571801566579635
+    },
+    "Q3": {
+      "novelty_pct": 0.4636893985113659,
+      "mean_abs_next_day_return_pct": 0.6920137749128814,
+      "realized_vol_next_21d": 0.1475724509163071,
+      "gjr_qlike": 0.3981770979069679,
+      "state_reader_qlike": 0.43614266843054417,
+      "gjr_normal_1pct_var_breach": 0.022628372497824196,
+      "drawdown_event_rate": 0.14882506527415143
+    },
+    "Q4": {
+      "novelty_pct": 0.7197494967568776,
+      "mean_abs_next_day_return_pct": 0.9757880433130331,
+      "realized_vol_next_21d": 0.19259971134208978,
+      "gjr_qlike": 0.2601238846677149,
+      "state_reader_qlike": 0.2563714479475971,
+      "gjr_normal_1pct_var_breach": 0.020887728459530026,
+      "drawdown_event_rate": 0.2724107919930374
+    },
+    "Q5 (most novel)": {
+      "novelty_pct": 0.9337837837837838,
+      "mean_abs_next_day_return_pct": 1.4250826216556969,
+      "realized_vol_next_21d": 0.26456248768508617,
+      "gjr_qlike": 0.20800438278625943,
+      "state_reader_qlike": 0.2270458130197636,
+      "gjr_normal_1pct_var_breach": 0.014782608695652174,
+      "drawdown_event_rate": 0.34347826086956523
+    }
+  }
+}

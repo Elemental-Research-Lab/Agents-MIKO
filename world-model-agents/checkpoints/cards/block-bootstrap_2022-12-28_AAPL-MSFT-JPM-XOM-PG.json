@@ -1,0 +1,12 @@
+{
+  "name": "block-bootstrap",
+  "version": "v1",
+  "cutoff": "2022-12-28",
+  "assets": [
+    "AAPL",
+    "MSFT",
+    "JPM",
+    "XOM",
+    "PG"
+  ]
+}

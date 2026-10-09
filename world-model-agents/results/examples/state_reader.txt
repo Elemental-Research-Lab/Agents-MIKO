@@ -1,0 +1,16 @@
+State Reader · as of 2022-12-28
+Verdict: elevated
+The market reads as elevated (probability 100%). Today is more unusual than 72% of past days. In 6 of 10 closest past periods the S&P 500 had a drawdown of 5% or more within the next 21 trading days.
+  P(elevated regime): 1 [SIM]
+  Novelty percentile vs past days: 0.721 [SIM]
+  Next-21-day volatility (annualized): 19.8% [SIM]
+  P(S&P 500 drawdown worse than 7% in 21 days): 0.144 [SIM]
+  VIX close: 22.1 [DATA]
+  Realized volatility, last 21 days (annualized): 20.0% [CALC]
+  S&P 500 drawdown from 1-year high: -21.1% [CALC]
+  Average stock correlation, last 63 days: 0.48 [CALC]
+  Closest past periods followed by a 5%+ drawdown (of 10): 6 [CALC]
+  Median S&P 500 move over the next 21 days after the closest periods: -2.9% [CALC]
+  Model: state-encoder v1 (cutoff 2022-12-28) · seed None · data d-64e58446 · trial f5467caa7d (#1 in lineage)
+  Regimes are fitted labels, not ground truth.
+  What followed a past period is history, not a forecast.
