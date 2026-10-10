@@ -27,14 +27,14 @@ class StateReader:
         ctx.returns_upto(as_of)  # refuses non-trading days and dates outside the data
         enc = ctx.encoder(as_of)
         F = ctx.features.loc[:as_of]
-        probs = enc.filtered_regime_probs(F).iloc[-1]
+        reg_hist = enc.filtered_regime_probs(F)
+        probs = reg_hist.iloc[-1]
         regime = str(probs.idxmax())
         nov, nov_pct = enc.novelty(F)
         risk = enc.forward_risk(F)
         an = enc.analogs(F, k_analogs)
         T = ctx.targets
         P = ctx.prices["SP500"]
-        reg_hist = enc.filtered_regime_probs(F)
         rows = []
         for _, a in an.iterrows():
             d = a["date"]

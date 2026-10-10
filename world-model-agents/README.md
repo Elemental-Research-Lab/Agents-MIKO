@@ -1,6 +1,18 @@
 # MIKO world-model agents
 
-**State Reader · Simulator · Scenario Generator · Planner.** Working, tested (55 tests) and benchmarked on public data, out of sample.
+**State Reader · Simulator · Scenario Generator · Planner.** A live HTTP service on daily market data, tested (94 tests plus a 61-session day-by-day soak test) and benchmarked on public data.
+
+## Live service (start here)
+
+```bash
+pip install -e ".[live]"
+python scripts/live_smoke_test.py      # pulls today's closes from Yahoo Finance and checks every agent end to end
+MIKO_API_KEY=change-me uvicorn miko.service.app:app --port 8000   # or: docker compose up --build
+```
+
+After every NYSE close the service pulls the new closes, runs data-quality checks, refits the world models, runs the model gates, and only then switches over. Answers always come from the latest completed session that passed every check. Endpoints: `/v1/state`, `/v1/simulate`, `/v1/scenario`, `/v1/scenario/replay`, `/v1/plan`, `/v1/plan/policy`, plus `/health`, `/ready`, `/status`. Configuration, refusal behaviour, gates and operations are in [PRODUCTION.md](PRODUCTION.md). One step remains before calling it production: run `scripts/live_smoke_test.py` on a machine with internet, since the build machine could not reach any market data feed.
+
+The rest of this README covers the agents, the world models and the research benchmarks behind them.
 
 These are the four *world-model agents* from the MIKO team brief (section 04). World-model agents compute: their outputs are numbers, paths and plans, never prose. LLMs appear only where the brief allows: they *propose* (turn "S&P -20%, oil +40%" or "keep monthly CVaR under 6%" into a structured spec), and the world models *check* before anything is computed. Every result follows the brief's result anatomy (section 08): source badges on every number (`SIM` / `DATA` / `CALC`), distributions instead of single answers, a count-based read-out ("In 7 of 20 simulated futures…"), provenance (model, cutoff, seed, data snapshot) and a trial id from the trial ledger.
 
@@ -25,7 +37,7 @@ The short version: the GARCH-filtered path generator is the workhorse and beats 
 
 ```bash
 pip install -e ".[dev,bench]"        # numpy pandas scipy scikit-learn statsmodels arch hmmlearn cvxpy skfolio (+ pytest, gluonts)
-pytest -q                            # 55 tests, ~1 minute
+pytest -q                            # 94 tests (+1 live-network test, opt-in), ~1 minute
 python scripts/demo.py               # runs all four agents, saves results/examples/ and checkpoints/
 bash scripts/run_all_benchmarks.sh   # reproduces every table in results/ (~40 min on 2 cores)
 ```
@@ -133,7 +145,7 @@ Every model carries a model card (`checkpoints/cards/*.json` after running the d
 | 6 Every run is a counted trial | `core/ledger.py` | `test_simulator_is_reproducible`, `test_ledger_counts_every_trial` |
 | 9 Your trades are part of the world | impact layer in the Simulator | `test_simulator_costs_need_adv` |
 | 11 A blank input is never zero | `require`, `Number`, model `fit`/`sample` | `test_blank_is_never_zero`, `test_simulator_refuses_bad_books`, `test_statepath_refuses_blank_latest_return` |
-| 12 Every check catches a planted defect | the whole suite | 55 tests |
+| 12 Every check catches a planted defect | the whole suite | 94 tests |
 
 ## Benchmarks in detail
 
@@ -267,15 +279,20 @@ Register it in `AgentContext.path_model` and rerun `bench/simulator_exchange.py`
 
 ## Layout
 ```
+PRODUCTION.md             how to run, configure, monitor and operate the live service
+Dockerfile, docker-compose.yml
 miko/
+  live.py                 live feed (Yahoo), NYSE session clock, price cache, data-quality gates
+  sources.py              data sources the agents run on (live panel or research panel)
+  service/                HTTP API (app.py), live runtime with hot swaps (runtime.py), model gates (gates.py)
   data.py                 public data loaders + data card + snapshot id
   evaluation.py           CRPS, pinball, FZ0, Kupiec, Christoffersen, Diebold-Mariano, QLIKE
   core/                   guards (trust rules), result envelope, trial ledger, LLM layer
   worldmodels/            features, state encoder, path generators + baselines, impact, scenario engine
   agents/                 context, state_reader, simulator, scenario_generator, planner
 bench/                    benchmark scripts (one per table in results/)
-tests/                    55 tests incl. planted defects
-scripts/                  demo.py, run_all_benchmarks.sh
+tests/                    94 tests incl. planted defects, live data layer and the HTTP service
+scripts/                  live_smoke_test.py, replay_soak.py, demo.py, run_all_benchmarks.sh
 results/                  benchmark tables (.md/.json), example agent outputs, trial ledger
 checkpoints/              fitted models (.pkl, after the demo) and model cards
 ```

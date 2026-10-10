@@ -6,3 +6,5 @@ checkpoints/*.pkl
 results/sim_sp500/
 results/log_*.txt
 .env
+live_data/
+*.tmp

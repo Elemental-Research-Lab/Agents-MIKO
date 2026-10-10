@@ -1,0 +1,14 @@
+services:
+  miko-agents:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      MIKO_PROVIDER: yahoo
+      MIKO_API_KEY: ${MIKO_API_KEY:?set MIKO_API_KEY}
+      MIKO_REFRESH_SECONDS: "1800"
+      MIKO_MAX_LAG: "1"
+      # MIKO_STOCKS: "AAPL,MSFT,..."   # default: the 20 research stocks
+    volumes: ["miko-data:/data"]
+    restart: unless-stopped
+volumes:
+  miko-data:
