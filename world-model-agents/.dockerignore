@@ -1,0 +1,9 @@
+results
+checkpoints
+live_data
+tests
+bench
+scripts
+**/__pycache__
+.pytest_cache
+*.zip

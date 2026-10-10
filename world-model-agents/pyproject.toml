@@ -1,14 +1,18 @@
 [project]
 name = "miko-wm-agents"
-version = "0.1.0"
+version = "0.2.0"
 description = "MIKO world-model agents: State Reader, Simulator, Scenario Generator, Planner"
 requires-python = ">=3.10"
 dependencies = ["numpy", "pandas", "scipy", "scikit-learn", "statsmodels", "arch", "hmmlearn", "cvxpy", "skfolio"]
 
 [project.optional-dependencies]
+live = ["fastapi>=0.110", "uvicorn>=0.29", "yfinance>=0.2.40", "exchange_calendars>=4.5", "httpx"]
 bench = ["gluonts"]
 llm = ["google-genai", "openai"]
-dev = ["pytest"]
+dev = ["pytest", "httpx", "fastapi>=0.110", "uvicorn>=0.29", "yfinance>=0.2.40", "exchange_calendars>=4.5"]
+
+[tool.setuptools.packages.find]
+include = ["miko*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

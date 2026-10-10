@@ -155,6 +155,17 @@ class StateEncoder:
     # ---------------------------------------------------------- readings
     def filtered_regime_probs(self, features: pd.DataFrame) -> pd.DataFrame:
         """Forward-filtered P(regime_t | data up to t). No smoothing, so no look-ahead."""
+        cache = self.__dict__.setdefault("_probs_cache", {})
+        ck = (len(features), features.index[0], features.index[-1], float(features[self._rf].iloc[-1].sum()))
+        if ck in cache:
+            return cache[ck].copy()
+        out_df = self._filtered_regime_probs(features)
+        if len(cache) > 8:
+            cache.clear()
+        cache[ck] = out_df
+        return out_df.copy()
+
+    def _filtered_regime_probs(self, features: pd.DataFrame) -> pd.DataFrame:
         X = self.transform(features)[self._rf].to_numpy()
         K = self.n_regimes
         logB = np.column_stack(
